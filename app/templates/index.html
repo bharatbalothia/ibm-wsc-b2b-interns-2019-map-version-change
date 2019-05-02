@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<nav class="navbar navbar-inverse">
+	    <div class="container-fluid">
+	        <ul class="nav navbar-nav">
+	            <li><a href="{{ url_for('version_change') }}">Home</a></li>
+	            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right">
+				
+			</ul>
+			<div class="navbar-header navbar-right">
+	            <a class="navbar-brand" href="#">Welcome, {{ user }}</a>
+	        </div>
+	    </div>
+	</nav>
+	
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul>
+	    {% for message in messages %}
+	    <li>{{ message }}</li>
+	    {% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+
+	<div class="container jumbotron">	
+
+	<center class="well well-warning"><h2>Map Version Change</h2></center>
+
+	<form class="form-inline" method="POST" action="uploader_basemap" enctype = "multipart/form-data">
+
+		<div class="form-group">
+			
+			<div class="row">	
+					<div class="row col-lg-6">
+					<label for="asd" class="col-lg-6" style="padding-left: 100px;margin-top: 10px;">Upload baseMap</label>
+				<div  class="col-lg-6" style="margin-top: 10px;">
+					<input type = "file" name = "file" id="asd" value="Upload BaseMap" accept=".mxl,.ddf,.xml" />
+				</div>
+					</div>
+	    		<div class="col-lg-3" style="margin-top: 10px;">	
+		    		<div class="input-group">
+		        		<span class="input-group-addon">Select New Version</span>
+		            	<select name="select_version" class="form-control">
+		              		{% for v in newversion %}
+		              		<option value="{{ v.version }}">{{ v.version }}</option>
+		              		{% endfor %}
+		            	</select>
+		 			</div>
+				</div>
+				<div class="col-lg-3" style="float: right;margin-top: 10px;">
+				<input type="text" class="form-control" name="Map" placeholder="Enter New Map Name"  style="width:250px;" required>
+				</div>
+			</div>
+			
+			<hr>	
+		    <span style="padding-left: 480px;"><button type="submit" class="btn btn-lg btn-primary" style="width:200px;">Submit</button></span>
+		</div>
+	</form>
+	</div>
+{% endblock %}

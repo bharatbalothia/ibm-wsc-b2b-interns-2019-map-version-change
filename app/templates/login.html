@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    	<div class="navbar-header">
+        	<h1 class=" navbar-brand" style="font-size: 25px;padding-left: 570px">Version Change Service</h1>
+    	</div>
+    </div>
+</nav>
+
+	<div class="container jumbotron" align="center">
+		<div class="wrapper">
+			<form action="/authentication" method="post" name="Login_Form" class="form-signin">       
+				  <hr class="colorgraph"><br>
+				  <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" style="width:550px;" />
+				  <br>
+				  <input type="password" class="form-control" name="password" placeholder="Password" required="" style="width:550px;"/>     		  
+				  {% if authorized == 0 %}
+				  <div align="center">
+				  	<h4>Wrong Username or Password!!</h4>
+				  </div>
+				  {% endif %}
+				  <br>					 
+				  <button class="btn btn-lg btn-primary"  name="Submit" value="Login" type="Submit" style="width:200px;">Login</button>  			
+			</form>			
+		</div>
+	</div>
+{% endblock %}

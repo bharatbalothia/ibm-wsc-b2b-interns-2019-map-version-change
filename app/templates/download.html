@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="{{ url_for('version_change') }}">Home</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            
+        </ul>
+        <div class="navbar-header navbar-right">
+            <a class="navbar-brand" href="#">Welcome, {{ user }}</a>
+        </div>
+    </div>
+</nav>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<div class="container jumbotron">   
+
+<center class="well well-warning"><h2>Map Version Change</h2></center>
+        <div class="row">   
+            <div class="col-lg-4" align="center">
+                <label style="margin-top: 10px;">BaseMap Version : </label>
+                <label style="margin-top: 10px;"><code>{{ version1 }}</code></label>
+            </div>
+            <div class="col-lg-4" align="center">
+                <label style="margin-top: 10px;">New Version : <code> {{ version }}</code></label>
+            </div>
+            <div class="col-lg-4" align="center">
+                <label style="margin-top: 10px;">Map Transaction : <code>{{ transaction }}</code></label>
+            </div>
+        </div>
+</div>
+{% if count1 %}
+<center><h3 class="alert alert-success">{{ count1 }}
+<div class = "btn-group" style="float: right; padding-right: 200px">
+    <span style="padding-right: 20px"></span>
+    <button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+    <a href="#">Download Map</a>
+    <span class = "caret"></span>
+   </button>
+    <ul class = "dropdown-menu" role = "menu">
+      <li><a href="/return_files/" download="{{ map_name }}">Download Map</a></li>
+    </ul>
+</div>
+</h3></center>      
+{% endif %}
+
+{% if count %}
+<h3 class="alert alert-success" style="padding-left: 300px">{{ count }}
+<div class = "btn-group" style="float: right; padding-right: 200px">
+    <button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+    <a href="#" >Download Map</a>
+    <span class = "caret"></span>
+   </button>
+    <ul class = "dropdown-menu" role = "menu">
+      <li><a href="/return_files/" download="{{ map_name }}">Download Map</a></li>
+    </ul>
+</div>
+<div class = "btn-group" style="float: right;">
+    <span style="padding-right: 20px"></span>
+    <button type = "button" class = "btn btn-default dropdown-toggle" data-toggle = "dropdown">
+    <a href="#">Download Report</a>
+    <span class = "caret"></span>
+   </button>
+   
+    <ul class = "dropdown-menu" role = "menu">
+      <li><a href = "/report_file/" download="Report.docx">Download Report</a></li>
+    </ul>
+</div>
+</h3>      
+{% endif %}
+{% if df2 %}
+<center><h3>Added List</h3></center> 
+<center><h4>Groups to be Added</h4></center>
+<table class="table">{{df2 | safe}}</table><br>
+{% endif %}
+{% if df20 %}
+<center><h4>Segments to be Added</h4></center>
+<table class="table">{{df20 | safe}}</table><br>
+{% endif %}
+{% if df11 %}
+<center><h4>Elements to be Added</h4></center>
+<table class="table">{{df11 | safe}}</table><br>
+{% endif %}
+
+{% if df5 %}
+<center><h3>Deleted List</h3></center> 
+<center><h4>Groups to be Deleted</h4></center>
+<table class="table">{{df5 | safe}}</table><br>
+{% endif %}
+{% if df23 %}
+<center><h4>Segments to be Deleted</h4></center>
+<table class="table">{{df23 | safe}}</table><br>
+{% endif %}
+{% if df14 %}
+<center><h4>Elements to be Deleted</h4></center>
+<table class="table">{{df14 | safe}}</table><br>
+{% endif %}
+
+{% if df8 %}
+<center><h3>Changes in Length</h3></center> 
+<center><h4>Group Looping Change</h4></center>
+<table class="table">{{df8 | safe}}</table><br>
+{% endif %}
+{% if df26 %}
+<center><h4>Segements Looping Change</h4></center>
+<table class="table">{{df26 | safe}}</table><br>
+{% endif %}
+{% if df17 %}
+<center><h4>Elements Length Change</h4></center>
+<table class="table">{{df17 | safe}}</table><br>
+{% endif %}
+{% if df29 %}
+<center><h4>Elements DataType Change</h4></center>
+<table class="table">{{df29 | safe}}</table><br>
+{% endif %}
+
+{% endblock %}
