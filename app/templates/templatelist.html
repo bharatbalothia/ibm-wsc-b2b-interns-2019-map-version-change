@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<nav class="navbar navbar-inverse">
+	    <div class="container-fluid">
+	        <ul class="nav navbar-nav">
+	            <li><a href="{{ url_for('version_change') }}">Home</a></li>
+                <li><a href="/report_file">Templates</a></li>
+	            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right">
+				
+			</ul>
+			<div class="navbar-header navbar-right">
+	            <a class="navbar-brand" href="#">Welcome, {{ user }}</a>
+	        </div>
+	    </div>
+	</nav>
+	
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul>
+	    {% for message in messages %}
+	    <li>{{ message }}</li>
+	    {% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+
+	<div class="container jumbotron">	
+
+	<center class="well well-warning"><h2>Map Version Change</h2></center>
+
+
+    <form method="POST" action="templateUploader" enctype = "multipart/form-data">
+
+		<div class="form-group">
+            <div class="row">
+					<div class="row col-lg-6">
+					<label for="asd" class="col-lg-6" style="padding-left: 20px;margin-top: 10px;">Upload Template</label>
+				<div  class="col-lg-8" style="margin-top: 10px;">
+					<input type = "file" name = "file" id="asd"  class="form-control" accept=".mxl,.ddf,.xml" />
+                </div>
+					</div>
+		        <span style="padding-left: 480px;"><button type="submit" class="btn btn-lg btn-primary" style="width:200px;">Submit</button></span>
+		</div>
+        </div>
+	</form>
+    <table class="table table-striped" width="60px">
+    {% for filename in files  %}
+      <tr>
+        <td>{{ filename }}</td>
+        <td><a href="downloadTemplate/{{filename}}" class="btn btn-default pull-right">Download</a></td>
+        <td><a href="deleteTemplate/{{filename}}" class="btn btn-default pull-right">Delete</a></td>
+      </tr>
+    {% endfor %}
+    </table>
+    </div>
+
+{% endblock %}

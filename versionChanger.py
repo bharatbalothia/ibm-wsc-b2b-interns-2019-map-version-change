@@ -1,9 +1,10 @@
 import couchdb
 from bs4 import BeautifulSoup
-import ediUtils
 from collections import defaultdict
+from ediUtils import ediUtils
 from operator import itemgetter
 import json
+import itertools
 
 
 
@@ -19,6 +20,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     f2 = open(target_template,encoding="utf-8")
     soup1 = BeautifulSoup(f2.read(), 'lxml-xml')
     soup2 = BeautifulSoup(f1.read(), 'lxml-xml')
+    Utils = ediUtils()
 
     soup2.MapDetails.Summary.Description.contents[0].replaceWith(new_map_name)
 
@@ -39,8 +41,8 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     base_component_list = [row.value for row in segment_db.view('_design/full_list/_view/full_list', key=[base_version, transaction])]
     target_componet_list = [row.value for row in segment_db.view('_design/full_list/_view/full_list', key=[target_version, transaction])]
     
-    main_groups_org = {data[1]:[data[0],data[2]] for data in ediUtils.allExtGroup(base_component_list)}
-    main_groups_final = {data[1]:[data[0],data[2]] for data in ediUtils.allExtGroup(target_componet_list)}
+    main_groups_org = {data[1]:[data[0],data[2]] for data in Utils.allExtGroup(base_component_list)}
+    main_groups_final = {data[1]:[data[0],data[2]] for data in Utils.allExtGroup(target_componet_list)}
     
     main_seg_org = {data.value[0]: data.value[1] for data in segment_db.view('_design/looping-view/_view/looping-view', key=[base_version, transaction])}
     main_seg_final = {data.value[0]: data.value[1] for data in segment_db.view('_design/looping-view/_view/looping-view', key=[target_version, transaction])}
@@ -59,6 +61,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     for x in main_groups_org:
         if x in main_groups_final:
             common_main_groups.append(x)
+            name_map[(x, main_groups_org[x][0])] = [x, main_groups_final[x][0]]
             main_grp_name.append([main_groups_org[x][0],main_groups_final[x][0],x])
     sess['group_looping_change'] = [[main_groups_org[i][0], i, main_groups_org[i][1], main_groups_final[i][1]] for i in common_main_groups if main_groups_org[i][1] != main_groups_final[i][1]]
     
@@ -70,13 +73,13 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
         for row in element_db.view('_design/elem-search/_view/elem-search', key=[base_version, seg]):
             doc = {
                 'length': [row.value[1], row.value[2]],
-                'type': ediUtils.decodeType(row.value[3])
+                'type': Utils.decodeType(row.value[3])
             }
             segment_element_org[row.value[0]] = doc
         for row in element_db.view('_design/elem-search/_view/elem-search', key=[target_version, seg]):
             doc = {
                 'length': [row.value[1], row.value[2]],
-                'type': ediUtils.decodeType(row.value[3])
+                'type': Utils.decodeType(row.value[3])
             }
             segment_element_final[row.value[0]] = doc
         for elem in segment_element_final:
@@ -100,14 +103,14 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     internal_groups_org = defaultdict(list)
     internal_group_length_org = {}
     internal_group_list_org =[]
-    for data in ediUtils.allIntGroup(base_component_list):
+    for data in Utils.allIntGroup(base_component_list):
         internal_group_list_org.append(data[1])
         internal_group_length_org[data[0]] = data[2]
         internal_groups_org[data[1]].append(data[0])
     internal_groups_final = defaultdict(list)
     internal_group_length_final = {}
     internal_group_list_final = []
-    for data in ediUtils.allIntGroup(target_componet_list):
+    for data in Utils.allIntGroup(target_componet_list):
         internal_group_list_final.append(data[1])
         internal_group_length_final[data[0]] = data[2]
         internal_groups_final[data[1]].append(data[0])
@@ -132,13 +135,13 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
             for row in element_db.view('_design/elem-search/_view/elem-search', key=[base_version, seg]):
                 doc = {
                     'length': [row.value[1], row.value[2]],
-                    'type': ediUtils.decodeType(row.value[3])
+                    'type': Utils.decodeType(row.value[3])
                 }
                 segment_element_org[row.value[0]] = doc
             for row in element_db.view('_design/elem-search/_view/elem-search', key=[target_version, seg]):
                 doc = {
                     'length': [row.value[1], row.value[2]],
-                    'type': ediUtils.decodeType(row.value[3])
+                    'type': Utils.decodeType(row.value[3])
                 }
                 segment_element_final[row.value[0]] = doc
             for elem in segment_element_final:
@@ -161,7 +164,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
                         [main_groups_org[grp][0], seg, elem, segment_element_org[elem]['type'], segment_element_final[elem]['type']])
 
     for grp in sess['grp_to_be_deleted']:
-        grp_result = ediUtils.getAllinternalgroups(base_component_list, grp)
+        grp_result = Utils.getAllinternalgroups(base_component_list, grp)
         if grp_result is not None:
             for k in list(internal_groups_org):
                 for x in internal_groups_org[k]:
@@ -169,16 +172,36 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
                         internal_groups_org[k].remove(x)
                     if len(internal_groups_org[k]) == 0:
                         del internal_groups_org[k]
+
+    print(internal_groups_org)
+    print(internal_groups_final)
+    print(internal_group_list_final)
+    print(internal_group_list_org)
+
     grp_common = []
     for i in internal_group_list_final:
-        if internal_group_list_org.count(i) > internal_group_list_final.count(i):
-            sess['grp_to_be_deleted'].append([internal_groups_org[i][0], i])
-        elif internal_group_list_org.count(i) < internal_group_list_final.count(i):
-            sess['grp_to_be_added'].append([internal_groups_final[i][0], i])
-        else:
+        if internal_group_list_org.count(i) == internal_group_list_final.count(i):
             grp_common.append(i)
-    
-    
+
+    for i in internal_groups_org:
+        if i in internal_groups_final:
+            for x, y in itertools.zip_longest(internal_groups_org[i], internal_groups_final[i]):
+                if x is not None and y is not None:
+                    name_map[(i, x)] = [i, y]
+                elif y is None:
+                    sess['grp_to_be_deleted'].append([x, i])
+                elif x is None:
+                    sess['grp_to_be_added'].append([y, i])
+        if i not in internal_groups_final:
+            for x in internal_groups_org[i]:
+                sess['grp_to_be_deleted'].append([x, i])
+    for i in internal_groups_final:
+        if i not in internal_groups_org:
+            for x in internal_groups_final[i]:
+                sess['grp_to_be_added'].append([x, i])
+
+    print(name_map)
+
     for grp in list(set(grp_common)):
         for position in range(0,len(internal_groups_org[grp])):
             grp_seg_org = {data.value[0]: data.value[1] for data in
@@ -208,13 +231,13 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
                 for row in element_db.view('_design/elem-search/_view/elem-search', key=[base_version, seg]):
                     doc = {
                         'length': [row.value[1], row.value[2]],
-                        'type': ediUtils.decodeType(row.value[3])
+                        'type': Utils.decodeType(row.value[3])
                     }
                     segment_element_org[row.value[0]] = doc
                 for row in element_db.view('_design/elem-search/_view/elem-search', key=[target_version, seg]):
                     doc = {
                         'length': [row.value[1], row.value[2]],
-                        'type': ediUtils.decodeType(row.value[3])
+                        'type': Utils.decodeType(row.value[3])
                     }
                     segment_element_final[row.value[0]] = doc
                 for elem in segment_element_final:
@@ -274,7 +297,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     #adding element items
     foundElement = {}
     for group,seg,elem in sess['elem_to_be_added']:
-        previousElement = ediUtils.getElementPosition(elem,target_version,seg)
+        previousElement = Utils.getElementPosition(elem,target_version,seg)
         actualElement = ""
         for segments in soup1.find_all('Segment'):
             if segments.Name and segments.Name.text.split(":")[0] == seg:
@@ -294,6 +317,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     
     
     # Group Name Change
+    '''
     group_list_org = []
     group_list_final = []
     new_group_names = [i[0] + "_" + i[1] for i in sess['grp_to_be_added']]  # names of new groups which will be added later
@@ -321,10 +345,18 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
         else:
             i += 1
             j += 1
-    
+    '''
+    for grp in soup2.find_all('Group'):
+        if len(grp.Name.text.split("_")) > 1 and (grp.Name.text.split("_")[1], grp.Name.text.split("_")[0]) in name_map:
+            print("name changed")
+            grp.Name.contents[0].replaceWith(
+                Utils.getCorrectgroupName(name_map[(grp.Name.text.split("_")[1], grp.Name.text.split("_")[0])][1],
+                                             name_map[(grp.Name.text.split("_")[1], grp.Name.text.split("_")[0])][0]))
+
     # segment Added
     for group,seg in sess['seg_to_be_added']:
-        previousitem = ediUtils.getSegmentPosition([group,seg],target_componet_list,transaction)
+        previousitem = Utils.getSegmentPosition([group,seg],target_componet_list,transaction)
+        print(previousitem)
         to_be_added = ""
         for grp in soup1.find_all("Group"):
             if grp.Name and grp.Name.text.split("_")[0] == group:
@@ -348,7 +380,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     
     #group added
     for group,seg in sess['grp_to_be_added']:
-        previousitem = ediUtils.getGroupPosition([group,seg],target_componet_list,transaction)
+        previousitem = Utils.getGroupPosition([group,seg],target_componet_list,transaction)
         print(previousitem)
         to_be_added = ""
         for grp in soup1.find_all("Group"):

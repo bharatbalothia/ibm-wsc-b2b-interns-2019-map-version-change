@@ -9,7 +9,7 @@
 </VersionControl>
 <Summary>
 <Author>IBM</Author>
-<Description>I_204_4010</Description>
+<Description>O_204_4010.mxl</Description>
 <MapFunction>24</MapFunction>
 </Summary>
 <Flags>
@@ -24,17 +24,6 @@
 <KeepTrailingZeroes>0</KeepTrailingZeroes>
 </Flags>
 <EDIAssociations_IN>
-<AgencyID>X</AgencyID>
-<VersionID>004010</VersionID>
-<BindingID>204</BindingID>
-<FunctionGroupID>SM</FunctionGroupID>
-<AgencyDescription>X12</AgencyDescription>
-<VersionDescription>ANSI VERSION 4 RELEASE 1 SUBRELEASE 0  ASC X12</VersionDescription>
-<BindingDescription>MOTOR CARRIER LOAD TENDER</BindingDescription>
-<FunctionalGroupDescription></FunctionalGroupDescription>
-<Release>0</Release>
-</EDIAssociations_IN>
-<EDIAssociations_OUT>
 <AgencyID></AgencyID>
 <VersionID></VersionID>
 <BindingID></BindingID>
@@ -44,11 +33,45 @@
 <BindingDescription></BindingDescription>
 <FunctionalGroupDescription></FunctionalGroupDescription>
 <Release>0</Release>
+</EDIAssociations_IN>
+<EDIAssociations_OUT>
+<AgencyID>X</AgencyID>
+<VersionID>004010</VersionID>
+<BindingID>204</BindingID>
+<FunctionGroupID>SM</FunctionGroupID>
+<AgencyDescription>X12</AgencyDescription>
+<VersionDescription>ANSI VERSION 4 RELEASE 1 SUBRELEASE 0  ASC X12</VersionDescription>
+<BindingDescription>MOTOR CARRIER LOAD TENDER</BindingDescription>
+<FunctionalGroupDescription></FunctionalGroupDescription>
+<Release>0</Release>
 </EDIAssociations_OUT>
 </MapDetails>
 <TemplateOption>2</TemplateOption>
 <ExtendedRuleLibraries/>
 <INPUT>
+<PosSyntax>
+<DelimiterUsed>no</DelimiterUsed>
+<Delimiter1/><Delimiter2Used>no</Delimiter2Used>
+<Delimiter2/><RecordLengthUsed>no</RecordLengthUsed>
+<RecordLength>0</RecordLength>
+<CharacterEncoding></CharacterEncoding>
+<DecimalCharUsed>no</DecimalCharUsed>
+<DecimalChar/><UseBytePositions>no</UseBytePositions>
+<RepeatSuppressionCharUsed>no</RepeatSuppressionCharUsed>
+<RepeatSuppressionChar/><Group>
+<ID>555</ID>
+<Name>OUTPUT</Name>
+<Description></Description>
+<Active>1</Active>
+<ChildCount>0</ChildCount>
+<Note></Note>
+<Min>1</Min>
+<Max>1</Max>
+<PromoteGroup>no</PromoteGroup>
+<GroupChoiceType>0</GroupChoiceType>
+<OrderingType>0</OrderingType>
+<OrderingTag></OrderingTag>
+<UsageRelatedFieldName/></Group></PosSyntax></INPUT><OUTPUT>
 <EDISyntax>
 <TagDelimiterUsed>no</TagDelimiterUsed>
 <TagDelimiter/><SegmentDelimiterUsed>no</SegmentDelimiterUsed>
@@ -69,7 +92,7 @@
 <FixedLengthElementsNotDelimited>no</FixedLengthElementsNotDelimited>
 <DelimiterTerminatesCurrentElement>no</DelimiterTerminatesCurrentElement>
 <Group>
-<ID>557</ID>
+<ID>554</ID>
 <Name>204</Name>
 <Description>MOTOR CARRIER LOAD TENDER</Description>
 <Active>1</Active>
@@ -82,7 +105,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>556</ID>
+<ID>553</ID>
 <Name>B2</Name>
 <Description>BEGINNING SEGMENT FOR SHIPMENT INFORMATION TRANSACTION</Description>
 <Active>1</Active>
@@ -109,7 +132,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>555</ID>
+<ID>552</ID>
 <Name>0375</Name>
 <Description>TARIFF SERVICE CODE</Description>
 <Active>1</Active>
@@ -144,7 +167,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>554</ID>
+<ID>551</ID>
 <Name>0140</Name>
 <Description>STANDARD CARRIER ALPHA CODE</Description>
 <Active>1</Active>
@@ -179,7 +202,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>553</ID>
+<ID>550</ID>
 <Name>0154</Name>
 <Description>STANDARD POINT LOCATION CODE</Description>
 <Active>1</Active>
@@ -214,7 +237,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>552</ID>
+<ID>549</ID>
 <Name>0145</Name>
 <Description>SHIPMENT IDENTIFICATION NUMBER</Description>
 <Active>1</Active>
@@ -249,7 +272,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>551</ID>
+<ID>548</ID>
 <Name>0188</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -284,7 +307,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>550</ID>
+<ID>547</ID>
 <Name>0146</Name>
 <Description>SHIPMENT METHOD OF PAYMENT</Description>
 <Active>1</Active>
@@ -319,7 +342,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>549</ID>
+<ID>546</ID>
 <Name>0147</Name>
 <Description>SHIPMENT QUALIFIER</Description>
 <Active>1</Active>
@@ -354,7 +377,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>548</ID>
+<ID>545</ID>
 <Name>0086</Name>
 <Description>TOTAL EQUIPMENT</Description>
 <Active>1</Active>
@@ -389,7 +412,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>547</ID>
+<ID>544</ID>
 <Name>0460</Name>
 <Description>SHIPMENT WEIGHT CODE</Description>
 <Active>1</Active>
@@ -424,7 +447,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>546</ID>
+<ID>543</ID>
 <Name>0501</Name>
 <Description>CUSTOMS DOCUMENTATION HANDLING CODE</Description>
 <Active>1</Active>
@@ -459,7 +482,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>545</ID>
+<ID>542</ID>
 <Name>0335</Name>
 <Description>TRANSPORTATION TERMS CODE</Description>
 <Active>1</Active>
@@ -494,7 +517,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>544</ID>
+<ID>541</ID>
 <Name>0591</Name>
 <Description>PAYMENT METHOD CODE</Description>
 <Active>1</Active>
@@ -530,7 +553,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>543</ID>
+<ID>540</ID>
 <Name>B2A</Name>
 <Description>SET PURPOSE</Description>
 <Active>1</Active>
@@ -557,7 +580,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>542</ID>
+<ID>539</ID>
 <Name>0353</Name>
 <Description>TRANSACTION SET PURPOSE CODE</Description>
 <Active>1</Active>
@@ -592,7 +615,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>541</ID>
+<ID>538</ID>
 <Name>0346</Name>
 <Description>APPLICATION TYPE</Description>
 <Active>1</Active>
@@ -628,7 +651,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>540</ID>
+<ID>537</ID>
 <Name>L11</Name>
 <Description>BUSINESS INSTRUCTIONS AND REFERENCE NUMBER</Description>
 <Active>1</Active>
@@ -655,7 +678,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>539</ID>
+<ID>536</ID>
 <Name>0127</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -683,8 +706,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>539</FieldID>
-<FieldID>537</FieldID>
+<FieldID>536</FieldID>
+<FieldID>534</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -698,7 +721,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>538</ID>
+<ID>535</ID>
 <Name>0128</Name>
 <Description>REFERENCE IDENTIFICATION QUALIFIER</Description>
 <Active>1</Active>
@@ -726,8 +749,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>539</FieldID>
-<FieldID>538</FieldID>
+<FieldID>536</FieldID>
+<FieldID>535</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -741,7 +764,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>537</ID>
+<ID>534</ID>
 <Name>0352</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -777,7 +800,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>536</ID>
+<ID>533</ID>
 <Name>G62</Name>
 <Description>DATE/TIME</Description>
 <Active>1</Active>
@@ -804,7 +827,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>535</ID>
+<ID>532</ID>
 <Name>0432</Name>
 <Description>DATE QUALIFIER</Description>
 <Active>1</Active>
@@ -832,8 +855,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>535</FieldID>
-<FieldID>533</FieldID>
+<FieldID>532</FieldID>
+<FieldID>530</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -847,7 +870,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>534</ID>
+<ID>531</ID>
 <Name>0373</Name>
 <Description>DATE</Description>
 <Active>1</Active>
@@ -875,8 +898,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>535</FieldID>
-<FieldID>534</FieldID>
+<FieldID>532</FieldID>
+<FieldID>531</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -890,7 +913,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>533</ID>
+<ID>530</ID>
 <Name>0176</Name>
 <Description>TIME QUALIFIER</Description>
 <Active>1</Active>
@@ -918,8 +941,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>533</FieldID>
-<FieldID>532</FieldID>
+<FieldID>530</FieldID>
+<FieldID>529</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -933,7 +956,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>532</ID>
+<ID>529</ID>
 <Name>0337</Name>
 <Description>TIME</Description>
 <Active>1</Active>
@@ -968,7 +991,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>531</ID>
+<ID>528</ID>
 <Name>0623</Name>
 <Description>TIME CODE</Description>
 <Active>1</Active>
@@ -1004,7 +1027,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>530</ID>
+<ID>527</ID>
 <Name>MS3</Name>
 <Description>INTERLINE INFORMATION</Description>
 <Active>1</Active>
@@ -1031,7 +1054,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>529</ID>
+<ID>526</ID>
 <Name>0140:2</Name>
 <Description>STANDARD CARRIER ALPHA CODE</Description>
 <Active>1</Active>
@@ -1066,7 +1089,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>528</ID>
+<ID>525</ID>
 <Name>0133</Name>
 <Description>ROUTING SEQUENCE CODE</Description>
 <Active>1</Active>
@@ -1101,7 +1124,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>527</ID>
+<ID>524</ID>
 <Name>0019</Name>
 <Description>CITY NAME</Description>
 <Active>1</Active>
@@ -1136,7 +1159,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>526</ID>
+<ID>523</ID>
 <Name>0091</Name>
 <Description>TRANSPORTATION METHOD/TYPE CODE</Description>
 <Active>1</Active>
@@ -1171,7 +1194,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>525</ID>
+<ID>522</ID>
 <Name>0156</Name>
 <Description>STATE OR PROVINCE CODE</Description>
 <Active>1</Active>
@@ -1199,8 +1222,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>525</FieldID>
-<FieldID>527</FieldID>
+<FieldID>522</FieldID>
+<FieldID>524</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1215,7 +1238,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>524</ID>
+<ID>521</ID>
 <Name>AT5</Name>
 <Description>BILL OF LADING HANDLING REQUIREMENTS</Description>
 <Active>1</Active>
@@ -1242,7 +1265,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>523</ID>
+<ID>520</ID>
 <Name>0152</Name>
 <Description>SPECIAL HANDLING CODE</Description>
 <Active>1</Active>
@@ -1270,8 +1293,8 @@
 <RelationCode>exclusion</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>523</FieldID>
-<FieldID>521</FieldID>
+<FieldID>520</FieldID>
+<FieldID>518</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1285,7 +1308,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>522</ID>
+<ID>519</ID>
 <Name>0560</Name>
 <Description>SPECIAL SERVICES CODE</Description>
 <Active>1</Active>
@@ -1313,8 +1336,8 @@
 <RelationCode>exclusion</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>522</FieldID>
-<FieldID>521</FieldID>
+<FieldID>519</FieldID>
+<FieldID>518</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1328,7 +1351,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>521</ID>
+<ID>518</ID>
 <Name>0153</Name>
 <Description>SPECIAL HANDLING DESCRIPTION</Description>
 <Active>1</Active>
@@ -1364,7 +1387,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>520</ID>
+<ID>517</ID>
 <Name>PLD</Name>
 <Description>PALLET INFORMATION</Description>
 <Active>1</Active>
@@ -1391,7 +1414,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>519</ID>
+<ID>516</ID>
 <Name>0406</Name>
 <Description>QUANTITY OF PALLETS SHIPPED</Description>
 <Active>1</Active>
@@ -1426,7 +1449,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>518</ID>
+<ID>515</ID>
 <Name>0399</Name>
 <Description>PALLET EXCHANGE CODE</Description>
 <Active>1</Active>
@@ -1461,7 +1484,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>517</ID>
+<ID>514</ID>
 <Name>0188:2</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -1489,8 +1512,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>517</FieldID>
-<FieldID>516</FieldID>
+<FieldID>514</FieldID>
+<FieldID>513</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1504,7 +1527,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>516</ID>
+<ID>513</ID>
 <Name>0081</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -1540,7 +1563,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>515</ID>
+<ID>512</ID>
 <Name>LH6</Name>
 <Description>HAZARDOUS CERTIFICATION</Description>
 <Active>1</Active>
@@ -1567,7 +1590,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>514</ID>
+<ID>511</ID>
 <Name>0093</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -1602,7 +1625,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>513</ID>
+<ID>510</ID>
 <Name>0272</Name>
 <Description>HAZARDOUS CERTIFICATION CODE</Description>
 <Active>1</Active>
@@ -1630,8 +1653,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>513</FieldID>
-<FieldID>512</FieldID>
+<FieldID>510</FieldID>
+<FieldID>509</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1645,7 +1668,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>512</ID>
+<ID>509</ID>
 <Name>0273</Name>
 <Description>HAZARDOUS CERTIFICATION DECLARATION</Description>
 <Active>1</Active>
@@ -1680,7 +1703,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>511</ID>
+<ID>508</ID>
 <Name>0273:2</Name>
 <Description>HAZARDOUS CERTIFICATION DECLARATION</Description>
 <Active>1</Active>
@@ -1716,7 +1739,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>510</ID>
+<ID>507</ID>
 <Name>NTE</Name>
 <Description>NOTE/SPECIAL INSTRUCTION</Description>
 <Active>1</Active>
@@ -1743,7 +1766,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>509</ID>
+<ID>506</ID>
 <Name>0363</Name>
 <Description>NOTE REFERENCE CODE</Description>
 <Active>1</Active>
@@ -1778,7 +1801,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>508</ID>
+<ID>505</ID>
 <Name>0352:2</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -1814,7 +1837,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>507</ID>
+<ID>504</ID>
 <Name>0100_N1</Name>
 <Description></Description>
 <Active>1</Active>
@@ -1827,7 +1850,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>506</ID>
+<ID>503</ID>
 <Name>N1</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -1854,7 +1877,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>505</ID>
+<ID>502</ID>
 <Name>0098</Name>
 <Description>ENTITY IDENTIFIER CODE</Description>
 <Active>1</Active>
@@ -1889,7 +1912,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>504</ID>
+<ID>501</ID>
 <Name>0093:2</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -1917,8 +1940,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>504</FieldID>
-<FieldID>503</FieldID>
+<FieldID>501</FieldID>
+<FieldID>500</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1932,7 +1955,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>503</ID>
+<ID>500</ID>
 <Name>0066</Name>
 <Description>IDENTIFICATION CODE QUALIFIER</Description>
 <Active>1</Active>
@@ -1960,8 +1983,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>503</FieldID>
-<FieldID>502</FieldID>
+<FieldID>500</FieldID>
+<FieldID>499</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -1975,7 +1998,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>502</ID>
+<ID>499</ID>
 <Name>0067</Name>
 <Description>IDENTIFICATION CODE</Description>
 <Active>1</Active>
@@ -2010,7 +2033,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>501</ID>
+<ID>498</ID>
 <Name>0706</Name>
 <Description>ENTITY RELATIONSHIP CODE</Description>
 <Active>1</Active>
@@ -2045,7 +2068,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>500</ID>
+<ID>497</ID>
 <Name>0098:2</Name>
 <Description>ENTITY IDENTIFIER CODE</Description>
 <Active>1</Active>
@@ -2081,7 +2104,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>499</ID>
+<ID>496</ID>
 <Name>N2</Name>
 <Description>ADDITIONAL NAME INFORMATION</Description>
 <Active>1</Active>
@@ -2108,7 +2131,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>498</ID>
+<ID>495</ID>
 <Name>0093:3</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -2143,7 +2166,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>497</ID>
+<ID>494</ID>
 <Name>0093:4</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -2179,7 +2202,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>496</ID>
+<ID>493</ID>
 <Name>N3</Name>
 <Description>ADDRESS INFORMATION</Description>
 <Active>1</Active>
@@ -2206,7 +2229,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>495</ID>
+<ID>492</ID>
 <Name>0166</Name>
 <Description>ADDRESS INFORMATION</Description>
 <Active>1</Active>
@@ -2241,7 +2264,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>494</ID>
+<ID>491</ID>
 <Name>0166:2</Name>
 <Description>ADDRESS INFORMATION</Description>
 <Active>1</Active>
@@ -2277,7 +2300,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>493</ID>
+<ID>490</ID>
 <Name>N4</Name>
 <Description>GEOGRAPHIC LOCATION</Description>
 <Active>1</Active>
@@ -2304,7 +2327,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>492</ID>
+<ID>489</ID>
 <Name>0019:2</Name>
 <Description>CITY NAME</Description>
 <Active>1</Active>
@@ -2339,7 +2362,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>491</ID>
+<ID>488</ID>
 <Name>0156:2</Name>
 <Description>STATE OR PROVINCE CODE</Description>
 <Active>1</Active>
@@ -2374,7 +2397,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>490</ID>
+<ID>487</ID>
 <Name>0116</Name>
 <Description>POSTAL CODE</Description>
 <Active>1</Active>
@@ -2409,7 +2432,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>489</ID>
+<ID>486</ID>
 <Name>0026</Name>
 <Description>COUNTRY CODE</Description>
 <Active>1</Active>
@@ -2444,7 +2467,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>488</ID>
+<ID>485</ID>
 <Name>0309</Name>
 <Description>LOCATION QUALIFIER</Description>
 <Active>1</Active>
@@ -2479,7 +2502,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>487</ID>
+<ID>484</ID>
 <Name>0310</Name>
 <Description>LOCATION IDENTIFIER</Description>
 <Active>1</Active>
@@ -2507,8 +2530,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>487</FieldID>
-<FieldID>488</FieldID>
+<FieldID>484</FieldID>
+<FieldID>485</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -2523,7 +2546,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>486</ID>
+<ID>483</ID>
 <Name>L11:2</Name>
 <Description>BUSINESS INSTRUCTIONS AND REFERENCE NUMBER</Description>
 <Active>1</Active>
@@ -2550,7 +2573,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>485</ID>
+<ID>482</ID>
 <Name>0127:2</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -2578,8 +2601,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>485</FieldID>
-<FieldID>483</FieldID>
+<FieldID>482</FieldID>
+<FieldID>480</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -2593,7 +2616,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>484</ID>
+<ID>481</ID>
 <Name>0128:2</Name>
 <Description>REFERENCE IDENTIFICATION QUALIFIER</Description>
 <Active>1</Active>
@@ -2621,8 +2644,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>485</FieldID>
-<FieldID>484</FieldID>
+<FieldID>482</FieldID>
+<FieldID>481</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -2636,7 +2659,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>483</ID>
+<ID>480</ID>
 <Name>0352:3</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -2672,7 +2695,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>482</ID>
+<ID>479</ID>
 <Name>G61</Name>
 <Description>CONTACT</Description>
 <Active>1</Active>
@@ -2699,7 +2722,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>481</ID>
+<ID>478</ID>
 <Name>0366</Name>
 <Description>CONTACT FUNCTION CODE</Description>
 <Active>1</Active>
@@ -2734,7 +2757,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>480</ID>
+<ID>477</ID>
 <Name>0093:5</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -2769,7 +2792,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>479</ID>
+<ID>476</ID>
 <Name>0365</Name>
 <Description>COMMUNICATION NUMBER QUALIFIER</Description>
 <Active>1</Active>
@@ -2797,8 +2820,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>479</FieldID>
-<FieldID>478</FieldID>
+<FieldID>476</FieldID>
+<FieldID>475</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -2812,7 +2835,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>478</ID>
+<ID>475</ID>
 <Name>0364</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -2847,7 +2870,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>477</ID>
+<ID>474</ID>
 <Name>0443</Name>
 <Description>CONTACT INQUIRY REFERENCE</Description>
 <Active>1</Active>
@@ -2883,7 +2906,7 @@
 </Field></Segment>
 </Group>
 <Group>
-<ID>476</ID>
+<ID>473</ID>
 <Name>0200_N7</Name>
 <Description></Description>
 <Active>1</Active>
@@ -2896,7 +2919,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>475</ID>
+<ID>472</ID>
 <Name>N7</Name>
 <Description>EQUIPMENT DETAILS</Description>
 <Active>1</Active>
@@ -2923,7 +2946,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>474</ID>
+<ID>471</ID>
 <Name>0206</Name>
 <Description>EQUIPMENT INITIAL</Description>
 <Active>1</Active>
@@ -2958,7 +2981,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>473</ID>
+<ID>470</ID>
 <Name>0207</Name>
 <Description>EQUIPMENT NUMBER</Description>
 <Active>1</Active>
@@ -2993,7 +3016,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>472</ID>
+<ID>469</ID>
 <Name>0081:2</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -3021,8 +3044,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>472</FieldID>
-<FieldID>471</FieldID>
+<FieldID>469</FieldID>
+<FieldID>468</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -3036,7 +3059,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>471</ID>
+<ID>468</ID>
 <Name>0187</Name>
 <Description>WEIGHT QUALIFIER</Description>
 <Active>1</Active>
@@ -3071,7 +3094,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>470</ID>
+<ID>467</ID>
 <Name>0167</Name>
 <Description>TARE WEIGHT</Description>
 <Active>1</Active>
@@ -3099,8 +3122,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>470</FieldID>
-<FieldID>459</FieldID>
+<FieldID>467</FieldID>
+<FieldID>456</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -3114,7 +3137,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>469</ID>
+<ID>466</ID>
 <Name>0232</Name>
 <Description>WEIGHT ALLOWANCE</Description>
 <Active>1</Active>
@@ -3149,7 +3172,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>468</ID>
+<ID>465</ID>
 <Name>0205</Name>
 <Description>DUNNAGE</Description>
 <Active>1</Active>
@@ -3184,7 +3207,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>467</ID>
+<ID>464</ID>
 <Name>0183</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -3212,8 +3235,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>467</FieldID>
-<FieldID>466</FieldID>
+<FieldID>464</FieldID>
+<FieldID>463</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -3227,7 +3250,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>466</ID>
+<ID>463</ID>
 <Name>0184</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -3262,7 +3285,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>465</ID>
+<ID>462</ID>
 <Name>0102</Name>
 <Description>OWNERSHIP CODE</Description>
 <Active>1</Active>
@@ -3297,7 +3320,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>464</ID>
+<ID>461</ID>
 <Name>0040</Name>
 <Description>EQUIPMENT DESCRIPTION CODE</Description>
 <Active>1</Active>
@@ -3332,7 +3355,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>463</ID>
+<ID>460</ID>
 <Name>0140:3</Name>
 <Description>STANDARD CARRIER ALPHA CODE</Description>
 <Active>1</Active>
@@ -3367,7 +3390,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>462</ID>
+<ID>459</ID>
 <Name>0319</Name>
 <Description>TEMPERATURE CONTROL</Description>
 <Active>1</Active>
@@ -3402,7 +3425,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>461</ID>
+<ID>458</ID>
 <Name>0219</Name>
 <Description>POSITION</Description>
 <Active>1</Active>
@@ -3437,7 +3460,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>460</ID>
+<ID>457</ID>
 <Name>0567</Name>
 <Description>EQUIPMENT LENGTH</Description>
 <Active>1</Active>
@@ -3472,7 +3495,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>459</ID>
+<ID>456</ID>
 <Name>0571</Name>
 <Description>TARE QUALIFIER CODE</Description>
 <Active>1</Active>
@@ -3507,7 +3530,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>458</ID>
+<ID>455</ID>
 <Name>0188:3</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -3542,7 +3565,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>457</ID>
+<ID>454</ID>
 <Name>0761</Name>
 <Description>EQUIPMENT NUMBER CHECK DIGIT</Description>
 <Active>1</Active>
@@ -3577,7 +3600,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>456</ID>
+<ID>453</ID>
 <Name>0056</Name>
 <Description>TYPE OF SERVICE CODE</Description>
 <Active>1</Active>
@@ -3612,7 +3635,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>455</ID>
+<ID>452</ID>
 <Name>0065</Name>
 <Description>HEIGHT</Description>
 <Active>1</Active>
@@ -3647,7 +3670,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>454</ID>
+<ID>451</ID>
 <Name>0189</Name>
 <Description>WIDTH</Description>
 <Active>1</Active>
@@ -3682,7 +3705,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>453</ID>
+<ID>450</ID>
 <Name>0024</Name>
 <Description>EQUIPMENT TYPE</Description>
 <Active>1</Active>
@@ -3717,7 +3740,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>452</ID>
+<ID>449</ID>
 <Name>0140:4</Name>
 <Description>STANDARD CARRIER ALPHA CODE</Description>
 <Active>1</Active>
@@ -3752,7 +3775,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>451</ID>
+<ID>448</ID>
 <Name>0301</Name>
 <Description>CAR TYPE CODE</Description>
 <Active>1</Active>
@@ -3788,7 +3811,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>450</ID>
+<ID>447</ID>
 <Name>N7A</Name>
 <Description>ACCESSORIAL EQUIPMENT DETAILS</Description>
 <Active>1</Active>
@@ -3815,7 +3838,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>449</ID>
+<ID>446</ID>
 <Name>1042</Name>
 <Description>LOAD OR DEVICE CODE</Description>
 <Active>1</Active>
@@ -3850,7 +3873,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>448</ID>
+<ID>445</ID>
 <Name>0082</Name>
 <Description>LENGTH</Description>
 <Active>1</Active>
@@ -3885,7 +3908,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>447</ID>
+<ID>444</ID>
 <Name>1043</Name>
 <Description>DIAMETER</Description>
 <Active>1</Active>
@@ -3920,7 +3943,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>446</ID>
+<ID>443</ID>
 <Name>1044</Name>
 <Description>HOSE TYPE CODE</Description>
 <Active>1</Active>
@@ -3955,7 +3978,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>445</ID>
+<ID>442</ID>
 <Name>1043:2</Name>
 <Description>DIAMETER</Description>
 <Active>1</Active>
@@ -3990,7 +4013,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>444</ID>
+<ID>441</ID>
 <Name>1043:3</Name>
 <Description>DIAMETER</Description>
 <Active>1</Active>
@@ -4025,7 +4048,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>443</ID>
+<ID>440</ID>
 <Name>1045</Name>
 <Description>INLET OR OUTLET MATERIAL TYPE CODE</Description>
 <Active>1</Active>
@@ -4060,7 +4083,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>442</ID>
+<ID>439</ID>
 <Name>1046</Name>
 <Description>INLET OR OUTLET FITTING TYPE CODE</Description>
 <Active>1</Active>
@@ -4095,7 +4118,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>441</ID>
+<ID>438</ID>
 <Name>1047</Name>
 <Description>MISCELLANEOUS EQUIPMENT CODE</Description>
 <Active>1</Active>
@@ -4131,7 +4154,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>440</ID>
+<ID>437</ID>
 <Name>N7B</Name>
 <Description>ADDITIONAL EQUIPMENT DETAILS</Description>
 <Active>1</Active>
@@ -4158,7 +4181,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>439</ID>
+<ID>436</ID>
 <Name>1024</Name>
 <Description>NUMBER OF TANK COMPARTMENTS</Description>
 <Active>1</Active>
@@ -4193,7 +4216,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>438</ID>
+<ID>435</ID>
 <Name>1025</Name>
 <Description>LOADING OR DISCHARGE LOCATION CODE</Description>
 <Active>1</Active>
@@ -4228,7 +4251,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>437</ID>
+<ID>434</ID>
 <Name>1026</Name>
 <Description>VESSEL MATERIAL CODE</Description>
 <Active>1</Active>
@@ -4263,7 +4286,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>436</ID>
+<ID>433</ID>
 <Name>1030</Name>
 <Description>GASKET TYPE CODE</Description>
 <Active>1</Active>
@@ -4298,7 +4321,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>435</ID>
+<ID>432</ID>
 <Name>1031</Name>
 <Description>TRAILER LINING TYPE CODE</Description>
 <Active>1</Active>
@@ -4333,7 +4356,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>434</ID>
+<ID>431</ID>
 <Name>0127:3</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -4369,7 +4392,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>433</ID>
+<ID>430</ID>
 <Name>MEA</Name>
 <Description>MEASUREMENTS</Description>
 <Active>1</Active>
@@ -4396,7 +4419,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>432</ID>
+<ID>429</ID>
 <Name>0737</Name>
 <Description>MEASUREMENT REFERENCE ID CODE</Description>
 <Active>1</Active>
@@ -4431,7 +4454,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>431</ID>
+<ID>428</ID>
 <Name>0738</Name>
 <Description>MEASUREMENT QUALIFIER</Description>
 <Active>1</Active>
@@ -4466,7 +4489,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>430</ID>
+<ID>427</ID>
 <Name>0739</Name>
 <Description>MEASUREMENT VALUE</Description>
 <Active>1</Active>
@@ -4494,10 +4517,10 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>430</FieldID>
-<FieldID>413</FieldID>
-<FieldID>412</FieldID>
+<FieldID>427</FieldID>
 <FieldID>410</FieldID>
+<FieldID>409</FieldID>
+<FieldID>407</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -4511,7 +4534,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Composite>
-<ID>429</ID>
+<ID>426</ID>
 <Name>C001</Name>
 <Description></Description>
 <Active>1</Active>
@@ -4522,7 +4545,7 @@
 <MaxUsage>1</MaxUsage>
 <TreatAsRepeat>no</TreatAsRepeat>
 <Field>
-<ID>428</ID>
+<ID>425</ID>
 <Name>0355</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -4557,7 +4580,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>427</ID>
+<ID>424</ID>
 <Name>1018</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -4592,7 +4615,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>426</ID>
+<ID>423</ID>
 <Name>0649</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -4627,7 +4650,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>425</ID>
+<ID>422</ID>
 <Name>0355:2</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -4662,7 +4685,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>424</ID>
+<ID>421</ID>
 <Name>1018:2</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -4697,7 +4720,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>423</ID>
+<ID>420</ID>
 <Name>0649:2</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -4732,7 +4755,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>422</ID>
+<ID>419</ID>
 <Name>0355:3</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -4767,7 +4790,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>421</ID>
+<ID>418</ID>
 <Name>1018:3</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -4802,7 +4825,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>420</ID>
+<ID>417</ID>
 <Name>0649:3</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -4837,7 +4860,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>419</ID>
+<ID>416</ID>
 <Name>0355:4</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -4872,7 +4895,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>418</ID>
+<ID>415</ID>
 <Name>1018:4</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -4907,7 +4930,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>417</ID>
+<ID>414</ID>
 <Name>0649:4</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -4942,7 +4965,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>416</ID>
+<ID>413</ID>
 <Name>0355:5</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -4977,7 +5000,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>415</ID>
+<ID>412</ID>
 <Name>1018:5</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -5012,7 +5035,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>414</ID>
+<ID>411</ID>
 <Name>0649:5</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -5048,7 +5071,7 @@
 </Field>
 </Composite>
 <Field>
-<ID>413</ID>
+<ID>410</ID>
 <Name>0740</Name>
 <Description>RANGE MINIMUM</Description>
 <Active>1</Active>
@@ -5076,8 +5099,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>413</FieldID>
-<FieldID>429</FieldID>
+<FieldID>410</FieldID>
+<FieldID>426</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5091,7 +5114,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>412</ID>
+<ID>409</ID>
 <Name>0741</Name>
 <Description>RANGE MAXIMUM</Description>
 <Active>1</Active>
@@ -5119,8 +5142,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>412</FieldID>
-<FieldID>429</FieldID>
+<FieldID>409</FieldID>
+<FieldID>426</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5134,7 +5157,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>411</ID>
+<ID>408</ID>
 <Name>0935</Name>
 <Description>MEASUREMENT SIGNIFICANCE CODE</Description>
 <Active>1</Active>
@@ -5162,10 +5185,10 @@
 <RelationCode>listconditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>411</FieldID>
-<FieldID>430</FieldID>
-<FieldID>413</FieldID>
-<FieldID>412</FieldID>
+<FieldID>408</FieldID>
+<FieldID>427</FieldID>
+<FieldID>410</FieldID>
+<FieldID>409</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5179,7 +5202,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>410</ID>
+<ID>407</ID>
 <Name>0936</Name>
 <Description>MEASUREMENT ATTRIBUTE CODE</Description>
 <Active>1</Active>
@@ -5207,8 +5230,8 @@
 <RelationCode>exclusion</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>410</FieldID>
-<FieldID>430</FieldID>
+<FieldID>407</FieldID>
+<FieldID>427</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5222,7 +5245,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>409</ID>
+<ID>406</ID>
 <Name>0752</Name>
 <Description>SURFACE/LAYER/POSITION CODE</Description>
 <Active>1</Active>
@@ -5257,7 +5280,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>408</ID>
+<ID>405</ID>
 <Name>1373</Name>
 <Description>MEASUREMENT METHOD OR DEVICE</Description>
 <Active>1</Active>
@@ -5293,7 +5316,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>407</ID>
+<ID>404</ID>
 <Name>M7</Name>
 <Description>SEAL NUMBERS</Description>
 <Active>1</Active>
@@ -5320,7 +5343,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>406</ID>
+<ID>403</ID>
 <Name>0225</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -5355,7 +5378,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>405</ID>
+<ID>402</ID>
 <Name>0225:2</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -5390,7 +5413,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>404</ID>
+<ID>401</ID>
 <Name>0225:3</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -5425,7 +5448,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>403</ID>
+<ID>400</ID>
 <Name>0225:4</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -5460,7 +5483,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>402</ID>
+<ID>399</ID>
 <Name>0098:3</Name>
 <Description>ENTITY IDENTIFIER CODE</Description>
 <Active>1</Active>
@@ -5496,7 +5519,7 @@
 </Field></Segment>
 </Group>
 <Group>
-<ID>401</ID>
+<ID>398</ID>
 <Name>0300_S5</Name>
 <Description></Description>
 <Active>1</Active>
@@ -5509,7 +5532,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>400</ID>
+<ID>397</ID>
 <Name>S5</Name>
 <Description>STOP OFF DETAILS</Description>
 <Active>1</Active>
@@ -5536,7 +5559,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>399</ID>
+<ID>396</ID>
 <Name>0165</Name>
 <Description>STOP SEQUENCE NUMBER</Description>
 <Active>1</Active>
@@ -5571,7 +5594,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>398</ID>
+<ID>395</ID>
 <Name>0163</Name>
 <Description>STOP REASON CODE</Description>
 <Active>1</Active>
@@ -5606,7 +5629,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>397</ID>
+<ID>394</ID>
 <Name>0081:3</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -5634,8 +5657,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>397</FieldID>
-<FieldID>396</FieldID>
+<FieldID>394</FieldID>
+<FieldID>393</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5649,7 +5672,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>396</ID>
+<ID>393</ID>
 <Name>0188:4</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -5684,7 +5707,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>395</ID>
+<ID>392</ID>
 <Name>0382</Name>
 <Description>NUMBER OF UNITS SHIPPED</Description>
 <Active>1</Active>
@@ -5712,8 +5735,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>395</FieldID>
-<FieldID>394</FieldID>
+<FieldID>392</FieldID>
+<FieldID>391</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5727,7 +5750,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>394</ID>
+<ID>391</ID>
 <Name>0355:6</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -5762,7 +5785,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>393</ID>
+<ID>390</ID>
 <Name>0183:2</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -5790,8 +5813,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>393</FieldID>
-<FieldID>392</FieldID>
+<FieldID>390</FieldID>
+<FieldID>389</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -5805,7 +5828,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>392</ID>
+<ID>389</ID>
 <Name>0184:2</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -5840,7 +5863,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>391</ID>
+<ID>388</ID>
 <Name>0352:4</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -5875,7 +5898,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>390</ID>
+<ID>387</ID>
 <Name>0154:2</Name>
 <Description>STANDARD POINT LOCATION CODE</Description>
 <Active>1</Active>
@@ -5910,7 +5933,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>389</ID>
+<ID>386</ID>
 <Name>0190</Name>
 <Description>ACCOMPLISH CODE</Description>
 <Active>1</Active>
@@ -5946,7 +5969,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>388</ID>
+<ID>385</ID>
 <Name>L11:3</Name>
 <Description>BUSINESS INSTRUCTIONS AND REFERENCE NUMBER</Description>
 <Active>1</Active>
@@ -5973,7 +5996,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>387</ID>
+<ID>384</ID>
 <Name>0127:4</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -6001,8 +6024,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>387</FieldID>
-<FieldID>385</FieldID>
+<FieldID>384</FieldID>
+<FieldID>382</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6016,7 +6039,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>386</ID>
+<ID>383</ID>
 <Name>0128:3</Name>
 <Description>REFERENCE IDENTIFICATION QUALIFIER</Description>
 <Active>1</Active>
@@ -6044,8 +6067,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>387</FieldID>
-<FieldID>386</FieldID>
+<FieldID>384</FieldID>
+<FieldID>383</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6059,7 +6082,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>385</ID>
+<ID>382</ID>
 <Name>0352:5</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -6095,7 +6118,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>384</ID>
+<ID>381</ID>
 <Name>G62:2</Name>
 <Description>DATE/TIME</Description>
 <Active>1</Active>
@@ -6122,7 +6145,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>383</ID>
+<ID>380</ID>
 <Name>0432:2</Name>
 <Description>DATE QUALIFIER</Description>
 <Active>1</Active>
@@ -6150,8 +6173,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>383</FieldID>
-<FieldID>381</FieldID>
+<FieldID>380</FieldID>
+<FieldID>378</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6165,7 +6188,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>382</ID>
+<ID>379</ID>
 <Name>0373:2</Name>
 <Description>DATE</Description>
 <Active>1</Active>
@@ -6193,8 +6216,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>383</FieldID>
-<FieldID>382</FieldID>
+<FieldID>380</FieldID>
+<FieldID>379</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6208,7 +6231,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>381</ID>
+<ID>378</ID>
 <Name>0176:2</Name>
 <Description>TIME QUALIFIER</Description>
 <Active>1</Active>
@@ -6236,8 +6259,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>381</FieldID>
-<FieldID>380</FieldID>
+<FieldID>378</FieldID>
+<FieldID>377</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6251,7 +6274,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>380</ID>
+<ID>377</ID>
 <Name>0337:2</Name>
 <Description>TIME</Description>
 <Active>1</Active>
@@ -6286,7 +6309,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>379</ID>
+<ID>376</ID>
 <Name>0623:2</Name>
 <Description>TIME CODE</Description>
 <Active>1</Active>
@@ -6322,7 +6345,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>378</ID>
+<ID>375</ID>
 <Name>AT8</Name>
 <Description>SHIPMENT WEIGHT, PACKAGING AND QUANTITY DATA</Description>
 <Active>1</Active>
@@ -6349,7 +6372,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>377</ID>
+<ID>374</ID>
 <Name>0187:2</Name>
 <Description>WEIGHT QUALIFIER</Description>
 <Active>1</Active>
@@ -6377,9 +6400,9 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>377</FieldID>
-<FieldID>376</FieldID>
-<FieldID>375</FieldID>
+<FieldID>374</FieldID>
+<FieldID>373</FieldID>
+<FieldID>372</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6393,7 +6416,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>376</ID>
+<ID>373</ID>
 <Name>0188:5</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -6428,7 +6451,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>375</ID>
+<ID>372</ID>
 <Name>0081:4</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -6463,7 +6486,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>374</ID>
+<ID>371</ID>
 <Name>0080</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -6498,7 +6521,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>373</ID>
+<ID>370</ID>
 <Name>0080:2</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -6533,7 +6556,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>372</ID>
+<ID>369</ID>
 <Name>0184:3</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -6561,8 +6584,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>372</FieldID>
-<FieldID>371</FieldID>
+<FieldID>369</FieldID>
+<FieldID>368</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6576,7 +6599,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>371</ID>
+<ID>368</ID>
 <Name>0183:3</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -6612,7 +6635,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>370</ID>
+<ID>367</ID>
 <Name>LAD</Name>
 <Description>LADING DETAIL</Description>
 <Active>1</Active>
@@ -6639,7 +6662,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>369</ID>
+<ID>366</ID>
 <Name>0211</Name>
 <Description>PACKAGING FORM CODE</Description>
 <Active>1</Active>
@@ -6667,8 +6690,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>369</FieldID>
-<FieldID>368</FieldID>
+<FieldID>366</FieldID>
+<FieldID>365</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6682,7 +6705,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>368</ID>
+<ID>365</ID>
 <Name>0080:3</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -6717,7 +6740,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>367</ID>
+<ID>364</ID>
 <Name>0188:6</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -6745,8 +6768,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>367</FieldID>
-<FieldID>366</FieldID>
+<FieldID>364</FieldID>
+<FieldID>363</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6760,7 +6783,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>366</ID>
+<ID>363</ID>
 <Name>0395</Name>
 <Description>UNIT WEIGHT</Description>
 <Active>1</Active>
@@ -6795,7 +6818,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>365</ID>
+<ID>362</ID>
 <Name>0188:7</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -6823,8 +6846,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>365</FieldID>
-<FieldID>364</FieldID>
+<FieldID>362</FieldID>
+<FieldID>361</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6838,7 +6861,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>364</ID>
+<ID>361</ID>
 <Name>0081:5</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -6873,7 +6896,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>363</ID>
+<ID>360</ID>
 <Name>0235</Name>
 <Description>PRODUCT/SERVICE ID QUALIFIER</Description>
 <Active>1</Active>
@@ -6901,8 +6924,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>363</FieldID>
-<FieldID>362</FieldID>
+<FieldID>360</FieldID>
+<FieldID>359</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6916,7 +6939,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>362</ID>
+<ID>359</ID>
 <Name>0234</Name>
 <Description>PRODUCT/SERVICE ID</Description>
 <Active>1</Active>
@@ -6951,7 +6974,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>361</ID>
+<ID>358</ID>
 <Name>0235:2</Name>
 <Description>PRODUCT/SERVICE ID QUALIFIER</Description>
 <Active>1</Active>
@@ -6979,8 +7002,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>361</FieldID>
-<FieldID>360</FieldID>
+<FieldID>358</FieldID>
+<FieldID>357</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -6994,7 +7017,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>360</ID>
+<ID>357</ID>
 <Name>0234:2</Name>
 <Description>PRODUCT/SERVICE ID</Description>
 <Active>1</Active>
@@ -7029,7 +7052,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>359</ID>
+<ID>356</ID>
 <Name>0235:3</Name>
 <Description>PRODUCT/SERVICE ID QUALIFIER</Description>
 <Active>1</Active>
@@ -7057,8 +7080,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>359</FieldID>
-<FieldID>358</FieldID>
+<FieldID>356</FieldID>
+<FieldID>355</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -7072,7 +7095,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>358</ID>
+<ID>355</ID>
 <Name>0234:3</Name>
 <Description>PRODUCT/SERVICE ID</Description>
 <Active>1</Active>
@@ -7107,7 +7130,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>357</ID>
+<ID>354</ID>
 <Name>0079</Name>
 <Description>LADING DESCRIPTION</Description>
 <Active>1</Active>
@@ -7143,7 +7166,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>356</ID>
+<ID>353</ID>
 <Name>AT5:2</Name>
 <Description>BILL OF LADING HANDLING REQUIREMENTS</Description>
 <Active>1</Active>
@@ -7170,7 +7193,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>355</ID>
+<ID>352</ID>
 <Name>0152:2</Name>
 <Description>SPECIAL HANDLING CODE</Description>
 <Active>1</Active>
@@ -7198,8 +7221,8 @@
 <RelationCode>exclusion</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>355</FieldID>
-<FieldID>353</FieldID>
+<FieldID>352</FieldID>
+<FieldID>350</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -7213,7 +7236,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>354</ID>
+<ID>351</ID>
 <Name>0560:2</Name>
 <Description>SPECIAL SERVICES CODE</Description>
 <Active>1</Active>
@@ -7241,8 +7264,8 @@
 <RelationCode>exclusion</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>354</FieldID>
-<FieldID>353</FieldID>
+<FieldID>351</FieldID>
+<FieldID>350</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -7256,7 +7279,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>353</ID>
+<ID>350</ID>
 <Name>0153:2</Name>
 <Description>SPECIAL HANDLING DESCRIPTION</Description>
 <Active>1</Active>
@@ -7292,7 +7315,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>352</ID>
+<ID>349</ID>
 <Name>PLD:2</Name>
 <Description>PALLET INFORMATION</Description>
 <Active>1</Active>
@@ -7319,7 +7342,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>351</ID>
+<ID>348</ID>
 <Name>0406:2</Name>
 <Description>QUANTITY OF PALLETS SHIPPED</Description>
 <Active>1</Active>
@@ -7354,7 +7377,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>350</ID>
+<ID>347</ID>
 <Name>0399:2</Name>
 <Description>PALLET EXCHANGE CODE</Description>
 <Active>1</Active>
@@ -7389,7 +7412,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>349</ID>
+<ID>346</ID>
 <Name>0188:8</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -7417,8 +7440,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>349</FieldID>
-<FieldID>348</FieldID>
+<FieldID>346</FieldID>
+<FieldID>345</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -7432,7 +7455,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>348</ID>
+<ID>345</ID>
 <Name>0081:6</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -7468,7 +7491,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>347</ID>
+<ID>344</ID>
 <Name>NTE:2</Name>
 <Description>NOTE/SPECIAL INSTRUCTION</Description>
 <Active>1</Active>
@@ -7495,7 +7518,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>346</ID>
+<ID>343</ID>
 <Name>0363:2</Name>
 <Description>NOTE REFERENCE CODE</Description>
 <Active>1</Active>
@@ -7530,7 +7553,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>345</ID>
+<ID>342</ID>
 <Name>0352:6</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -7566,7 +7589,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>344</ID>
+<ID>341</ID>
 <Name>0310_N1</Name>
 <Description></Description>
 <Active>1</Active>
@@ -7579,7 +7602,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>343</ID>
+<ID>340</ID>
 <Name>N1:2</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -7606,7 +7629,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>342</ID>
+<ID>339</ID>
 <Name>0098:4</Name>
 <Description>ENTITY IDENTIFIER CODE</Description>
 <Active>1</Active>
@@ -7641,7 +7664,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>341</ID>
+<ID>338</ID>
 <Name>0093:6</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -7669,8 +7692,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>341</FieldID>
-<FieldID>340</FieldID>
+<FieldID>338</FieldID>
+<FieldID>337</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -7684,7 +7707,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>340</ID>
+<ID>337</ID>
 <Name>0066:2</Name>
 <Description>IDENTIFICATION CODE QUALIFIER</Description>
 <Active>1</Active>
@@ -7712,8 +7735,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>340</FieldID>
-<FieldID>339</FieldID>
+<FieldID>337</FieldID>
+<FieldID>336</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -7727,7 +7750,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>339</ID>
+<ID>336</ID>
 <Name>0067:2</Name>
 <Description>IDENTIFICATION CODE</Description>
 <Active>1</Active>
@@ -7762,7 +7785,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>338</ID>
+<ID>335</ID>
 <Name>0706:2</Name>
 <Description>ENTITY RELATIONSHIP CODE</Description>
 <Active>1</Active>
@@ -7797,7 +7820,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>337</ID>
+<ID>334</ID>
 <Name>0098:5</Name>
 <Description>ENTITY IDENTIFIER CODE</Description>
 <Active>1</Active>
@@ -7833,7 +7856,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>336</ID>
+<ID>333</ID>
 <Name>N2:2</Name>
 <Description>ADDITIONAL NAME INFORMATION</Description>
 <Active>1</Active>
@@ -7860,7 +7883,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>335</ID>
+<ID>332</ID>
 <Name>0093:7</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -7895,7 +7918,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>334</ID>
+<ID>331</ID>
 <Name>0093:8</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -7931,7 +7954,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>333</ID>
+<ID>330</ID>
 <Name>N3:2</Name>
 <Description>ADDRESS INFORMATION</Description>
 <Active>1</Active>
@@ -7958,7 +7981,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>332</ID>
+<ID>329</ID>
 <Name>0166:3</Name>
 <Description>ADDRESS INFORMATION</Description>
 <Active>1</Active>
@@ -7993,7 +8016,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>331</ID>
+<ID>328</ID>
 <Name>0166:4</Name>
 <Description>ADDRESS INFORMATION</Description>
 <Active>1</Active>
@@ -8029,7 +8052,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>330</ID>
+<ID>327</ID>
 <Name>N4:2</Name>
 <Description>GEOGRAPHIC LOCATION</Description>
 <Active>1</Active>
@@ -8056,7 +8079,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>329</ID>
+<ID>326</ID>
 <Name>0019:3</Name>
 <Description>CITY NAME</Description>
 <Active>1</Active>
@@ -8091,7 +8114,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>328</ID>
+<ID>325</ID>
 <Name>0156:3</Name>
 <Description>STATE OR PROVINCE CODE</Description>
 <Active>1</Active>
@@ -8126,7 +8149,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>327</ID>
+<ID>324</ID>
 <Name>0116:2</Name>
 <Description>POSTAL CODE</Description>
 <Active>1</Active>
@@ -8161,7 +8184,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>326</ID>
+<ID>323</ID>
 <Name>0026:2</Name>
 <Description>COUNTRY CODE</Description>
 <Active>1</Active>
@@ -8196,7 +8219,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>325</ID>
+<ID>322</ID>
 <Name>0309:2</Name>
 <Description>LOCATION QUALIFIER</Description>
 <Active>1</Active>
@@ -8231,7 +8254,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>324</ID>
+<ID>321</ID>
 <Name>0310:2</Name>
 <Description>LOCATION IDENTIFIER</Description>
 <Active>1</Active>
@@ -8259,8 +8282,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>324</FieldID>
-<FieldID>325</FieldID>
+<FieldID>321</FieldID>
+<FieldID>322</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -8275,7 +8298,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>323</ID>
+<ID>320</ID>
 <Name>G61:2</Name>
 <Description>CONTACT</Description>
 <Active>1</Active>
@@ -8302,7 +8325,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>322</ID>
+<ID>319</ID>
 <Name>0366:2</Name>
 <Description>CONTACT FUNCTION CODE</Description>
 <Active>1</Active>
@@ -8337,7 +8360,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>321</ID>
+<ID>318</ID>
 <Name>0093:9</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -8372,7 +8395,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>320</ID>
+<ID>317</ID>
 <Name>0365:2</Name>
 <Description>COMMUNICATION NUMBER QUALIFIER</Description>
 <Active>1</Active>
@@ -8400,8 +8423,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>320</FieldID>
-<FieldID>319</FieldID>
+<FieldID>317</FieldID>
+<FieldID>316</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -8415,7 +8438,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>319</ID>
+<ID>316</ID>
 <Name>0364:2</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -8450,7 +8473,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>318</ID>
+<ID>315</ID>
 <Name>0443:2</Name>
 <Description>CONTACT INQUIRY REFERENCE</Description>
 <Active>1</Active>
@@ -8486,7 +8509,7 @@
 </Field></Segment>
 </Group>
 <Group>
-<ID>317</ID>
+<ID>314</ID>
 <Name>0320_L5</Name>
 <Description></Description>
 <Active>1</Active>
@@ -8499,7 +8522,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>316</ID>
+<ID>313</ID>
 <Name>L5</Name>
 <Description>DESCRIPTION, MARKS AND NUMBERS</Description>
 <Active>1</Active>
@@ -8526,7 +8549,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>315</ID>
+<ID>312</ID>
 <Name>0213</Name>
 <Description>LADING LINE ITEM NUMBER</Description>
 <Active>1</Active>
@@ -8561,7 +8584,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>314</ID>
+<ID>311</ID>
 <Name>0079:2</Name>
 <Description>LADING DESCRIPTION</Description>
 <Active>1</Active>
@@ -8596,7 +8619,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>313</ID>
+<ID>310</ID>
 <Name>0022</Name>
 <Description>COMMODITY CODE</Description>
 <Active>1</Active>
@@ -8624,8 +8647,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>313</FieldID>
-<FieldID>312</FieldID>
+<FieldID>310</FieldID>
+<FieldID>309</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -8639,7 +8662,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>312</ID>
+<ID>309</ID>
 <Name>0023</Name>
 <Description>COMMODITY CODE QUALIFIER</Description>
 <Active>1</Active>
@@ -8674,7 +8697,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>311</ID>
+<ID>308</ID>
 <Name>0103</Name>
 <Description>PACKAGING CODE</Description>
 <Active>1</Active>
@@ -8709,7 +8732,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>310</ID>
+<ID>307</ID>
 <Name>0087</Name>
 <Description>MARKS AND NUMBERS</Description>
 <Active>1</Active>
@@ -8744,7 +8767,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>309</ID>
+<ID>306</ID>
 <Name>0088</Name>
 <Description>MARKS AND NUMBERS QUALIFIER</Description>
 <Active>1</Active>
@@ -8772,8 +8795,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>309</FieldID>
-<FieldID>310</FieldID>
+<FieldID>306</FieldID>
+<FieldID>307</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -8787,7 +8810,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>308</ID>
+<ID>305</ID>
 <Name>0023:2</Name>
 <Description>COMMODITY CODE QUALIFIER</Description>
 <Active>1</Active>
@@ -8815,8 +8838,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>308</FieldID>
-<FieldID>307</FieldID>
+<FieldID>305</FieldID>
+<FieldID>304</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -8830,7 +8853,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>307</ID>
+<ID>304</ID>
 <Name>0022:2</Name>
 <Description>COMMODITY CODE</Description>
 <Active>1</Active>
@@ -8865,7 +8888,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>306</ID>
+<ID>303</ID>
 <Name>0595</Name>
 <Description>COMPARTMENT ID CODE</Description>
 <Active>1</Active>
@@ -8901,7 +8924,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>305</ID>
+<ID>302</ID>
 <Name>AT8:2</Name>
 <Description>SHIPMENT WEIGHT, PACKAGING AND QUANTITY DATA</Description>
 <Active>1</Active>
@@ -8928,7 +8951,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>304</ID>
+<ID>301</ID>
 <Name>0187:3</Name>
 <Description>WEIGHT QUALIFIER</Description>
 <Active>1</Active>
@@ -8956,9 +8979,9 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>304</FieldID>
-<FieldID>303</FieldID>
-<FieldID>302</FieldID>
+<FieldID>301</FieldID>
+<FieldID>300</FieldID>
+<FieldID>299</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -8972,7 +8995,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>303</ID>
+<ID>300</ID>
 <Name>0188:9</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -9007,7 +9030,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>302</ID>
+<ID>299</ID>
 <Name>0081:7</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -9042,7 +9065,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>301</ID>
+<ID>298</ID>
 <Name>0080:4</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -9077,7 +9100,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>300</ID>
+<ID>297</ID>
 <Name>0080:5</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -9112,7 +9135,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>299</ID>
+<ID>296</ID>
 <Name>0184:4</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -9140,8 +9163,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>299</FieldID>
-<FieldID>298</FieldID>
+<FieldID>296</FieldID>
+<FieldID>295</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -9155,7 +9178,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>298</ID>
+<ID>295</ID>
 <Name>0183:4</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -9191,7 +9214,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>297</ID>
+<ID>294</ID>
 <Name>0325_G61</Name>
 <Description></Description>
 <Active>1</Active>
@@ -9204,7 +9227,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>296</ID>
+<ID>293</ID>
 <Name>G61:3</Name>
 <Description>CONTACT</Description>
 <Active>1</Active>
@@ -9231,7 +9254,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>295</ID>
+<ID>292</ID>
 <Name>0366:3</Name>
 <Description>CONTACT FUNCTION CODE</Description>
 <Active>1</Active>
@@ -9266,7 +9289,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>294</ID>
+<ID>291</ID>
 <Name>0093:10</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -9301,7 +9324,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>293</ID>
+<ID>290</ID>
 <Name>0365:3</Name>
 <Description>COMMUNICATION NUMBER QUALIFIER</Description>
 <Active>1</Active>
@@ -9329,8 +9352,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>293</FieldID>
-<FieldID>292</FieldID>
+<FieldID>290</FieldID>
+<FieldID>289</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -9344,7 +9367,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>292</ID>
+<ID>289</ID>
 <Name>0364:3</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -9379,7 +9402,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>291</ID>
+<ID>288</ID>
 <Name>0443:3</Name>
 <Description>CONTACT INQUIRY REFERENCE</Description>
 <Active>1</Active>
@@ -9415,7 +9438,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>290</ID>
+<ID>287</ID>
 <Name>L11:4</Name>
 <Description>BUSINESS INSTRUCTIONS AND REFERENCE NUMBER</Description>
 <Active>1</Active>
@@ -9442,7 +9465,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>289</ID>
+<ID>286</ID>
 <Name>0127:5</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -9470,8 +9493,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>289</FieldID>
-<FieldID>287</FieldID>
+<FieldID>286</FieldID>
+<FieldID>284</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -9485,7 +9508,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>288</ID>
+<ID>285</ID>
 <Name>0128:4</Name>
 <Description>REFERENCE IDENTIFICATION QUALIFIER</Description>
 <Active>1</Active>
@@ -9513,8 +9536,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>289</FieldID>
-<FieldID>288</FieldID>
+<FieldID>286</FieldID>
+<FieldID>285</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -9528,7 +9551,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>287</ID>
+<ID>284</ID>
 <Name>0352:7</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -9564,7 +9587,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>286</ID>
+<ID>283</ID>
 <Name>LH6:2</Name>
 <Description>HAZARDOUS CERTIFICATION</Description>
 <Active>1</Active>
@@ -9591,7 +9614,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>285</ID>
+<ID>282</ID>
 <Name>0093:11</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -9626,7 +9649,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>284</ID>
+<ID>281</ID>
 <Name>0272:2</Name>
 <Description>HAZARDOUS CERTIFICATION CODE</Description>
 <Active>1</Active>
@@ -9654,8 +9677,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>284</FieldID>
-<FieldID>283</FieldID>
+<FieldID>281</FieldID>
+<FieldID>280</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -9669,7 +9692,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>283</ID>
+<ID>280</ID>
 <Name>0273:3</Name>
 <Description>HAZARDOUS CERTIFICATION DECLARATION</Description>
 <Active>1</Active>
@@ -9704,7 +9727,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>282</ID>
+<ID>279</ID>
 <Name>0273:4</Name>
 <Description>HAZARDOUS CERTIFICATION DECLARATION</Description>
 <Active>1</Active>
@@ -9740,7 +9763,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>281</ID>
+<ID>278</ID>
 <Name>0330_LH1</Name>
 <Description></Description>
 <Active>1</Active>
@@ -9753,7 +9776,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>280</ID>
+<ID>277</ID>
 <Name>LH1</Name>
 <Description>HAZARDOUS IDENTIFICATION INFORMATION</Description>
 <Active>1</Active>
@@ -9780,7 +9803,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>279</ID>
+<ID>276</ID>
 <Name>0355:7</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -9815,7 +9838,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>278</ID>
+<ID>275</ID>
 <Name>0080:6</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -9850,7 +9873,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>277</ID>
+<ID>274</ID>
 <Name>0277</Name>
 <Description>UN/NA IDENTIFICATION CODE</Description>
 <Active>1</Active>
@@ -9885,7 +9908,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>276</ID>
+<ID>273</ID>
 <Name>0200</Name>
 <Description>HAZARDOUS MATERIALS PAGE</Description>
 <Active>1</Active>
@@ -9920,7 +9943,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>275</ID>
+<ID>272</ID>
 <Name>0022:3</Name>
 <Description>COMMODITY CODE</Description>
 <Active>1</Active>
@@ -9955,7 +9978,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>274</ID>
+<ID>271</ID>
 <Name>0355:8</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -9990,7 +10013,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>273</ID>
+<ID>270</ID>
 <Name>0380</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -10025,7 +10048,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>272</ID>
+<ID>269</ID>
 <Name>0595:2</Name>
 <Description>COMPARTMENT ID CODE</Description>
 <Active>1</Active>
@@ -10060,7 +10083,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>271</ID>
+<ID>268</ID>
 <Name>0665</Name>
 <Description>RESIDUE INDICATOR CODE</Description>
 <Active>1</Active>
@@ -10095,7 +10118,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>270</ID>
+<ID>267</ID>
 <Name>0254</Name>
 <Description>PACKING GROUP CODE</Description>
 <Active>1</Active>
@@ -10130,7 +10153,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>269</ID>
+<ID>266</ID>
 <Name>1375</Name>
 <Description>INTERIM HAZARDOUS MATERIAL REGULATORY NUMBER</Description>
 <Active>1</Active>
@@ -10166,7 +10189,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>268</ID>
+<ID>265</ID>
 <Name>LH2</Name>
 <Description>HAZARDOUS CLASSIFICATION INFORMATION</Description>
 <Active>1</Active>
@@ -10193,7 +10216,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>267</ID>
+<ID>264</ID>
 <Name>0215</Name>
 <Description>HAZARDOUS CLASSIFICATION</Description>
 <Active>1</Active>
@@ -10228,7 +10251,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>266</ID>
+<ID>263</ID>
 <Name>0983</Name>
 <Description>HAZARDOUS CLASS QUALIFIER</Description>
 <Active>1</Active>
@@ -10263,7 +10286,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>265</ID>
+<ID>262</ID>
 <Name>0218</Name>
 <Description>HAZARDOUS PLACARD NOTATION</Description>
 <Active>1</Active>
@@ -10298,7 +10321,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>264</ID>
+<ID>261</ID>
 <Name>0222</Name>
 <Description>HAZARDOUS ENDORSEMENT</Description>
 <Active>1</Active>
@@ -10333,7 +10356,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>263</ID>
+<ID>260</ID>
 <Name>0759</Name>
 <Description>REPORTABLE QUANTITY CODE</Description>
 <Active>1</Active>
@@ -10368,7 +10391,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>262</ID>
+<ID>259</ID>
 <Name>0355:9</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -10396,8 +10419,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>262</FieldID>
-<FieldID>261</FieldID>
+<FieldID>259</FieldID>
+<FieldID>258</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -10411,7 +10434,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>261</ID>
+<ID>258</ID>
 <Name>0408</Name>
 <Description>TEMPERATURE</Description>
 <Active>1</Active>
@@ -10446,7 +10469,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>260</ID>
+<ID>257</ID>
 <Name>0355:10</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -10474,8 +10497,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>260</FieldID>
-<FieldID>259</FieldID>
+<FieldID>257</FieldID>
+<FieldID>256</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -10489,7 +10512,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>259</ID>
+<ID>256</ID>
 <Name>0408:2</Name>
 <Description>TEMPERATURE</Description>
 <Active>1</Active>
@@ -10524,7 +10547,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>258</ID>
+<ID>255</ID>
 <Name>0355:11</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -10552,8 +10575,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>258</FieldID>
-<FieldID>257</FieldID>
+<FieldID>255</FieldID>
+<FieldID>254</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -10567,7 +10590,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>257</ID>
+<ID>254</ID>
 <Name>0408:3</Name>
 <Description>TEMPERATURE</Description>
 <Active>1</Active>
@@ -10603,7 +10626,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>256</ID>
+<ID>253</ID>
 <Name>LH3</Name>
 <Description>HAZARDOUS MATERIAL SHIPPING NAME</Description>
 <Active>1</Active>
@@ -10630,7 +10653,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>255</ID>
+<ID>252</ID>
 <Name>0224</Name>
 <Description>HAZARDOUS MATERIAL SHIPPING NAME</Description>
 <Active>1</Active>
@@ -10658,8 +10681,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>255</FieldID>
-<FieldID>254</FieldID>
+<FieldID>252</FieldID>
+<FieldID>251</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -10673,7 +10696,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>254</ID>
+<ID>251</ID>
 <Name>0984</Name>
 <Description>HAZARDOUS MATERIAL SHIPPING NAME QUALIFIER</Description>
 <Active>1</Active>
@@ -10708,7 +10731,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>253</ID>
+<ID>250</ID>
 <Name>0985</Name>
 <Description>N.O.S. INDICATOR CODE</Description>
 <Active>1</Active>
@@ -10743,7 +10766,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>252</ID>
+<ID>249</ID>
 <Name>1073</Name>
 <Description>YES/NO CONDITION OR RESPONSE CODE</Description>
 <Active>1</Active>
@@ -10779,7 +10802,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>251</ID>
+<ID>248</ID>
 <Name>LFH</Name>
 <Description>FREEFORM HAZARDOUS MATERIAL INFORMATION</Description>
 <Active>1</Active>
@@ -10806,7 +10829,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>250</ID>
+<ID>247</ID>
 <Name>0808</Name>
 <Description>HAZARDOUS MATERIAL SHIPMENT INFORMATION QUALIFIER</Description>
 <Active>1</Active>
@@ -10841,7 +10864,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>249</ID>
+<ID>246</ID>
 <Name>0809</Name>
 <Description>HAZARDOUS MATERIAL SHIPMENT INFORMATION</Description>
 <Active>1</Active>
@@ -10876,7 +10899,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>248</ID>
+<ID>245</ID>
 <Name>0809:2</Name>
 <Description>HAZARDOUS MATERIAL SHIPMENT INFORMATION</Description>
 <Active>1</Active>
@@ -10911,7 +10934,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>247</ID>
+<ID>244</ID>
 <Name>1023</Name>
 <Description>HAZARD ZONE CODE</Description>
 <Active>1</Active>
@@ -10946,7 +10969,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>246</ID>
+<ID>243</ID>
 <Name>0355:12</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -10974,8 +10997,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>246</FieldID>
-<FieldID>245</FieldID>
+<FieldID>243</FieldID>
+<FieldID>242</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -10989,7 +11012,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>245</ID>
+<ID>242</ID>
 <Name>0380:2</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -11024,7 +11047,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>244</ID>
+<ID>241</ID>
 <Name>0380:3</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -11060,7 +11083,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>243</ID>
+<ID>240</ID>
 <Name>LEP</Name>
 <Description>EPA REQUIRED DATA</Description>
 <Active>1</Active>
@@ -11087,7 +11110,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>242</ID>
+<ID>239</ID>
 <Name>0806</Name>
 <Description>EPA WASTE STREAM NUMBER CODE</Description>
 <Active>1</Active>
@@ -11122,7 +11145,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>241</ID>
+<ID>238</ID>
 <Name>0807</Name>
 <Description>WASTE CHARACTERISTICS CODE</Description>
 <Active>1</Active>
@@ -11157,7 +11180,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>240</ID>
+<ID>237</ID>
 <Name>0156:4</Name>
 <Description>STATE OR PROVINCE CODE</Description>
 <Active>1</Active>
@@ -11185,8 +11208,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>240</FieldID>
-<FieldID>239</FieldID>
+<FieldID>237</FieldID>
+<FieldID>236</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -11200,7 +11223,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>239</ID>
+<ID>236</ID>
 <Name>0127:6</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -11236,7 +11259,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>238</ID>
+<ID>235</ID>
 <Name>LH4</Name>
 <Description>CANADIAN DANGEROUS REQUIREMENTS</Description>
 <Active>1</Active>
@@ -11263,7 +11286,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>237</ID>
+<ID>234</ID>
 <Name>0238</Name>
 <Description>EMERGENCY RESPONSE PLAN NUMBER</Description>
 <Active>1</Active>
@@ -11298,7 +11321,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>236</ID>
+<ID>233</ID>
 <Name>0364:4</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -11333,7 +11356,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>235</ID>
+<ID>232</ID>
 <Name>0254:2</Name>
 <Description>PACKING GROUP CODE</Description>
 <Active>1</Active>
@@ -11368,7 +11391,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>234</ID>
+<ID>231</ID>
 <Name>0230</Name>
 <Description>SUBSIDIARY CLASSIFICATION</Description>
 <Active>1</Active>
@@ -11403,7 +11426,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>233</ID>
+<ID>230</ID>
 <Name>0230:2</Name>
 <Description>SUBSIDIARY CLASSIFICATION</Description>
 <Active>1</Active>
@@ -11438,7 +11461,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>232</ID>
+<ID>229</ID>
 <Name>0230:3</Name>
 <Description>SUBSIDIARY CLASSIFICATION</Description>
 <Active>1</Active>
@@ -11473,7 +11496,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>231</ID>
+<ID>228</ID>
 <Name>0271</Name>
 <Description>SUBSIDIARY RISK INDICATOR</Description>
 <Active>1</Active>
@@ -11508,7 +11531,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>230</ID>
+<ID>227</ID>
 <Name>0267</Name>
 <Description>NET EXPLOSIVE QUANTITY</Description>
 <Active>1</Active>
@@ -11536,8 +11559,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>230</FieldID>
-<FieldID>226</FieldID>
+<FieldID>227</FieldID>
+<FieldID>223</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -11551,7 +11574,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>229</ID>
+<ID>226</ID>
 <Name>0805</Name>
 <Description>CANADIAN HAZARDOUS NOTATION</Description>
 <Active>1</Active>
@@ -11586,7 +11609,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>228</ID>
+<ID>225</ID>
 <Name>0986</Name>
 <Description>SPECIAL COMMODITY INDICATOR CODE</Description>
 <Active>1</Active>
@@ -11621,7 +11644,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>227</ID>
+<ID>224</ID>
 <Name>0364:5</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -11656,7 +11679,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>226</ID>
+<ID>223</ID>
 <Name>0355:13</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -11692,7 +11715,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>225</ID>
+<ID>222</ID>
 <Name>LHT</Name>
 <Description>TRANSBORDER HAZARDOUS REQUIREMENTS</Description>
 <Active>1</Active>
@@ -11719,7 +11742,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>224</ID>
+<ID>221</ID>
 <Name>0215:2</Name>
 <Description>HAZARDOUS CLASSIFICATION</Description>
 <Active>1</Active>
@@ -11754,7 +11777,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>223</ID>
+<ID>220</ID>
 <Name>0218:2</Name>
 <Description>HAZARDOUS PLACARD NOTATION</Description>
 <Active>1</Active>
@@ -11789,7 +11812,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>222</ID>
+<ID>219</ID>
 <Name>0222:2</Name>
 <Description>HAZARDOUS ENDORSEMENT</Description>
 <Active>1</Active>
@@ -11825,7 +11848,7 @@
 </Field></Segment></Group></Group>
 </Group>
 <Group>
-<ID>221</ID>
+<ID>218</ID>
 <Name>0350_OID</Name>
 <Description></Description>
 <Active>1</Active>
@@ -11838,7 +11861,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>220</ID>
+<ID>217</ID>
 <Name>OID</Name>
 <Description>ORDER IDENTIFICATION DETAIL</Description>
 <Active>1</Active>
@@ -11865,7 +11888,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>219</ID>
+<ID>216</ID>
 <Name>0127:7</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -11893,8 +11916,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>219</FieldID>
-<FieldID>218</FieldID>
+<FieldID>216</FieldID>
+<FieldID>215</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -11908,7 +11931,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>218</ID>
+<ID>215</ID>
 <Name>0324</Name>
 <Description>PURCHASE ORDER NUMBER</Description>
 <Active>1</Active>
@@ -11943,7 +11966,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>217</ID>
+<ID>214</ID>
 <Name>0127:8</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -11971,8 +11994,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>217</FieldID>
-<FieldID>218</FieldID>
+<FieldID>214</FieldID>
+<FieldID>215</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -11986,7 +12009,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>216</ID>
+<ID>213</ID>
 <Name>0355:14</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -12014,8 +12037,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>216</FieldID>
-<FieldID>215</FieldID>
+<FieldID>213</FieldID>
+<FieldID>212</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12029,7 +12052,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>215</ID>
+<ID>212</ID>
 <Name>0380:4</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -12064,7 +12087,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>214</ID>
+<ID>211</ID>
 <Name>0188:10</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -12092,8 +12115,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>214</FieldID>
-<FieldID>213</FieldID>
+<FieldID>211</FieldID>
+<FieldID>210</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12107,7 +12130,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>213</ID>
+<ID>210</ID>
 <Name>0081:8</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -12142,7 +12165,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>212</ID>
+<ID>209</ID>
 <Name>0184:5</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -12170,8 +12193,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>212</FieldID>
-<FieldID>211</FieldID>
+<FieldID>209</FieldID>
+<FieldID>208</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12185,7 +12208,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>211</ID>
+<ID>208</ID>
 <Name>0183:5</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -12221,7 +12244,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>210</ID>
+<ID>207</ID>
 <Name>G62:3</Name>
 <Description>DATE/TIME</Description>
 <Active>1</Active>
@@ -12248,7 +12271,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>209</ID>
+<ID>206</ID>
 <Name>0432:3</Name>
 <Description>DATE QUALIFIER</Description>
 <Active>1</Active>
@@ -12276,8 +12299,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>209</FieldID>
-<FieldID>207</FieldID>
+<FieldID>206</FieldID>
+<FieldID>204</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12291,7 +12314,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>208</ID>
+<ID>205</ID>
 <Name>0373:3</Name>
 <Description>DATE</Description>
 <Active>1</Active>
@@ -12319,8 +12342,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>209</FieldID>
-<FieldID>208</FieldID>
+<FieldID>206</FieldID>
+<FieldID>205</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12334,7 +12357,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>207</ID>
+<ID>204</ID>
 <Name>0176:3</Name>
 <Description>TIME QUALIFIER</Description>
 <Active>1</Active>
@@ -12362,8 +12385,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>207</FieldID>
-<FieldID>206</FieldID>
+<FieldID>204</FieldID>
+<FieldID>203</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12377,7 +12400,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>206</ID>
+<ID>203</ID>
 <Name>0337:3</Name>
 <Description>TIME</Description>
 <Active>1</Active>
@@ -12412,7 +12435,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>205</ID>
+<ID>202</ID>
 <Name>0623:3</Name>
 <Description>TIME CODE</Description>
 <Active>1</Active>
@@ -12448,7 +12471,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>204</ID>
+<ID>201</ID>
 <Name>LAD:2</Name>
 <Description>LADING DETAIL</Description>
 <Active>1</Active>
@@ -12475,7 +12498,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>203</ID>
+<ID>200</ID>
 <Name>0211:2</Name>
 <Description>PACKAGING FORM CODE</Description>
 <Active>1</Active>
@@ -12503,8 +12526,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>203</FieldID>
-<FieldID>202</FieldID>
+<FieldID>200</FieldID>
+<FieldID>199</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12518,7 +12541,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>202</ID>
+<ID>199</ID>
 <Name>0080:7</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -12553,7 +12576,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>201</ID>
+<ID>198</ID>
 <Name>0188:11</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -12581,8 +12604,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>201</FieldID>
-<FieldID>200</FieldID>
+<FieldID>198</FieldID>
+<FieldID>197</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12596,7 +12619,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>200</ID>
+<ID>197</ID>
 <Name>0395:2</Name>
 <Description>UNIT WEIGHT</Description>
 <Active>1</Active>
@@ -12631,7 +12654,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>199</ID>
+<ID>196</ID>
 <Name>0188:12</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -12659,8 +12682,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>199</FieldID>
-<FieldID>198</FieldID>
+<FieldID>196</FieldID>
+<FieldID>195</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12674,7 +12697,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>198</ID>
+<ID>195</ID>
 <Name>0081:9</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -12709,7 +12732,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>197</ID>
+<ID>194</ID>
 <Name>0235:4</Name>
 <Description>PRODUCT/SERVICE ID QUALIFIER</Description>
 <Active>1</Active>
@@ -12737,8 +12760,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>197</FieldID>
-<FieldID>196</FieldID>
+<FieldID>194</FieldID>
+<FieldID>193</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12752,7 +12775,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>196</ID>
+<ID>193</ID>
 <Name>0234:4</Name>
 <Description>PRODUCT/SERVICE ID</Description>
 <Active>1</Active>
@@ -12787,7 +12810,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>195</ID>
+<ID>192</ID>
 <Name>0235:5</Name>
 <Description>PRODUCT/SERVICE ID QUALIFIER</Description>
 <Active>1</Active>
@@ -12815,8 +12838,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>195</FieldID>
-<FieldID>194</FieldID>
+<FieldID>192</FieldID>
+<FieldID>191</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12830,7 +12853,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>194</ID>
+<ID>191</ID>
 <Name>0234:5</Name>
 <Description>PRODUCT/SERVICE ID</Description>
 <Active>1</Active>
@@ -12865,7 +12888,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>193</ID>
+<ID>190</ID>
 <Name>0235:6</Name>
 <Description>PRODUCT/SERVICE ID QUALIFIER</Description>
 <Active>1</Active>
@@ -12893,8 +12916,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>193</FieldID>
-<FieldID>192</FieldID>
+<FieldID>190</FieldID>
+<FieldID>189</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -12908,7 +12931,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>192</ID>
+<ID>189</ID>
 <Name>0234:6</Name>
 <Description>PRODUCT/SERVICE ID</Description>
 <Active>1</Active>
@@ -12943,7 +12966,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>191</ID>
+<ID>188</ID>
 <Name>0079:3</Name>
 <Description>LADING DESCRIPTION</Description>
 <Active>1</Active>
@@ -12979,7 +13002,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>190</ID>
+<ID>187</ID>
 <Name>0360_L5</Name>
 <Description></Description>
 <Active>1</Active>
@@ -12992,7 +13015,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>189</ID>
+<ID>186</ID>
 <Name>L5:2</Name>
 <Description>DESCRIPTION, MARKS AND NUMBERS</Description>
 <Active>1</Active>
@@ -13019,7 +13042,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>188</ID>
+<ID>185</ID>
 <Name>0213:2</Name>
 <Description>LADING LINE ITEM NUMBER</Description>
 <Active>1</Active>
@@ -13054,7 +13077,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>187</ID>
+<ID>184</ID>
 <Name>0079:4</Name>
 <Description>LADING DESCRIPTION</Description>
 <Active>1</Active>
@@ -13089,7 +13112,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>186</ID>
+<ID>183</ID>
 <Name>0022:4</Name>
 <Description>COMMODITY CODE</Description>
 <Active>1</Active>
@@ -13117,8 +13140,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>186</FieldID>
-<FieldID>185</FieldID>
+<FieldID>183</FieldID>
+<FieldID>182</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13132,7 +13155,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>185</ID>
+<ID>182</ID>
 <Name>0023:3</Name>
 <Description>COMMODITY CODE QUALIFIER</Description>
 <Active>1</Active>
@@ -13167,7 +13190,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>184</ID>
+<ID>181</ID>
 <Name>0103:2</Name>
 <Description>PACKAGING CODE</Description>
 <Active>1</Active>
@@ -13202,7 +13225,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>183</ID>
+<ID>180</ID>
 <Name>0087:2</Name>
 <Description>MARKS AND NUMBERS</Description>
 <Active>1</Active>
@@ -13237,7 +13260,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>182</ID>
+<ID>179</ID>
 <Name>0088:2</Name>
 <Description>MARKS AND NUMBERS QUALIFIER</Description>
 <Active>1</Active>
@@ -13265,8 +13288,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>182</FieldID>
-<FieldID>183</FieldID>
+<FieldID>179</FieldID>
+<FieldID>180</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13280,7 +13303,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>181</ID>
+<ID>178</ID>
 <Name>0023:4</Name>
 <Description>COMMODITY CODE QUALIFIER</Description>
 <Active>1</Active>
@@ -13308,8 +13331,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>181</FieldID>
-<FieldID>180</FieldID>
+<FieldID>178</FieldID>
+<FieldID>177</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13323,7 +13346,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>180</ID>
+<ID>177</ID>
 <Name>0022:5</Name>
 <Description>COMMODITY CODE</Description>
 <Active>1</Active>
@@ -13358,7 +13381,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>179</ID>
+<ID>176</ID>
 <Name>0595:3</Name>
 <Description>COMPARTMENT ID CODE</Description>
 <Active>1</Active>
@@ -13394,7 +13417,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>178</ID>
+<ID>175</ID>
 <Name>AT8:3</Name>
 <Description>SHIPMENT WEIGHT, PACKAGING AND QUANTITY DATA</Description>
 <Active>1</Active>
@@ -13421,7 +13444,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>177</ID>
+<ID>174</ID>
 <Name>0187:4</Name>
 <Description>WEIGHT QUALIFIER</Description>
 <Active>1</Active>
@@ -13449,9 +13472,9 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>177</FieldID>
-<FieldID>176</FieldID>
-<FieldID>175</FieldID>
+<FieldID>174</FieldID>
+<FieldID>173</FieldID>
+<FieldID>172</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13465,7 +13488,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>176</ID>
+<ID>173</ID>
 <Name>0188:13</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -13500,7 +13523,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>175</ID>
+<ID>172</ID>
 <Name>0081:10</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -13535,7 +13558,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>174</ID>
+<ID>171</ID>
 <Name>0080:8</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -13570,7 +13593,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>173</ID>
+<ID>170</ID>
 <Name>0080:9</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -13605,7 +13628,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>172</ID>
+<ID>169</ID>
 <Name>0184:6</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -13633,8 +13656,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>172</FieldID>
-<FieldID>171</FieldID>
+<FieldID>169</FieldID>
+<FieldID>168</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13648,7 +13671,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>171</ID>
+<ID>168</ID>
 <Name>0183:6</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -13684,7 +13707,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>170</ID>
+<ID>167</ID>
 <Name>0365_G61</Name>
 <Description></Description>
 <Active>1</Active>
@@ -13697,7 +13720,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>169</ID>
+<ID>166</ID>
 <Name>G61:4</Name>
 <Description>CONTACT</Description>
 <Active>1</Active>
@@ -13724,7 +13747,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>168</ID>
+<ID>165</ID>
 <Name>0366:4</Name>
 <Description>CONTACT FUNCTION CODE</Description>
 <Active>1</Active>
@@ -13759,7 +13782,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>167</ID>
+<ID>164</ID>
 <Name>0093:12</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -13794,7 +13817,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>166</ID>
+<ID>163</ID>
 <Name>0365:4</Name>
 <Description>COMMUNICATION NUMBER QUALIFIER</Description>
 <Active>1</Active>
@@ -13822,8 +13845,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>166</FieldID>
-<FieldID>165</FieldID>
+<FieldID>163</FieldID>
+<FieldID>162</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13837,7 +13860,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>165</ID>
+<ID>162</ID>
 <Name>0364:6</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -13872,7 +13895,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>164</ID>
+<ID>161</ID>
 <Name>0443:4</Name>
 <Description>CONTACT INQUIRY REFERENCE</Description>
 <Active>1</Active>
@@ -13908,7 +13931,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>163</ID>
+<ID>160</ID>
 <Name>L11:5</Name>
 <Description>BUSINESS INSTRUCTIONS AND REFERENCE NUMBER</Description>
 <Active>1</Active>
@@ -13935,7 +13958,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>162</ID>
+<ID>159</ID>
 <Name>0127:9</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -13963,8 +13986,8 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>162</FieldID>
-<FieldID>160</FieldID>
+<FieldID>159</FieldID>
+<FieldID>157</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -13978,7 +14001,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>161</ID>
+<ID>158</ID>
 <Name>0128:5</Name>
 <Description>REFERENCE IDENTIFICATION QUALIFIER</Description>
 <Active>1</Active>
@@ -14006,8 +14029,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>162</FieldID>
-<FieldID>161</FieldID>
+<FieldID>159</FieldID>
+<FieldID>158</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -14021,7 +14044,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>160</ID>
+<ID>157</ID>
 <Name>0352:8</Name>
 <Description>DESCRIPTION</Description>
 <Active>1</Active>
@@ -14057,7 +14080,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>159</ID>
+<ID>156</ID>
 <Name>LH6:3</Name>
 <Description>HAZARDOUS CERTIFICATION</Description>
 <Active>1</Active>
@@ -14084,7 +14107,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>158</ID>
+<ID>155</ID>
 <Name>0093:13</Name>
 <Description>NAME</Description>
 <Active>1</Active>
@@ -14119,7 +14142,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>157</ID>
+<ID>154</ID>
 <Name>0272:3</Name>
 <Description>HAZARDOUS CERTIFICATION CODE</Description>
 <Active>1</Active>
@@ -14147,8 +14170,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>157</FieldID>
-<FieldID>156</FieldID>
+<FieldID>154</FieldID>
+<FieldID>153</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -14162,7 +14185,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>156</ID>
+<ID>153</ID>
 <Name>0273:5</Name>
 <Description>HAZARDOUS CERTIFICATION DECLARATION</Description>
 <Active>1</Active>
@@ -14197,7 +14220,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>155</ID>
+<ID>152</ID>
 <Name>0273:6</Name>
 <Description>HAZARDOUS CERTIFICATION DECLARATION</Description>
 <Active>1</Active>
@@ -14233,7 +14256,7 @@
 </Field>
 </Segment>
 <Group>
-<ID>154</ID>
+<ID>151</ID>
 <Name>0370_LH1</Name>
 <Description></Description>
 <Active>1</Active>
@@ -14246,7 +14269,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>153</ID>
+<ID>150</ID>
 <Name>LH1:2</Name>
 <Description>HAZARDOUS IDENTIFICATION INFORMATION</Description>
 <Active>1</Active>
@@ -14273,7 +14296,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>152</ID>
+<ID>149</ID>
 <Name>0355:15</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -14308,7 +14331,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>151</ID>
+<ID>148</ID>
 <Name>0080:10</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -14343,7 +14366,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>150</ID>
+<ID>147</ID>
 <Name>0277:2</Name>
 <Description>UN/NA IDENTIFICATION CODE</Description>
 <Active>1</Active>
@@ -14378,7 +14401,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>149</ID>
+<ID>146</ID>
 <Name>0200:2</Name>
 <Description>HAZARDOUS MATERIALS PAGE</Description>
 <Active>1</Active>
@@ -14413,7 +14436,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>148</ID>
+<ID>145</ID>
 <Name>0022:6</Name>
 <Description>COMMODITY CODE</Description>
 <Active>1</Active>
@@ -14448,7 +14471,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>147</ID>
+<ID>144</ID>
 <Name>0355:16</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -14483,7 +14506,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>146</ID>
+<ID>143</ID>
 <Name>0380:5</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -14518,7 +14541,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>145</ID>
+<ID>142</ID>
 <Name>0595:4</Name>
 <Description>COMPARTMENT ID CODE</Description>
 <Active>1</Active>
@@ -14553,7 +14576,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>144</ID>
+<ID>141</ID>
 <Name>0665:2</Name>
 <Description>RESIDUE INDICATOR CODE</Description>
 <Active>1</Active>
@@ -14588,7 +14611,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>143</ID>
+<ID>140</ID>
 <Name>0254:3</Name>
 <Description>PACKING GROUP CODE</Description>
 <Active>1</Active>
@@ -14623,7 +14646,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>142</ID>
+<ID>139</ID>
 <Name>1375:2</Name>
 <Description>INTERIM HAZARDOUS MATERIAL REGULATORY NUMBER</Description>
 <Active>1</Active>
@@ -14659,7 +14682,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>141</ID>
+<ID>138</ID>
 <Name>LH2:2</Name>
 <Description>HAZARDOUS CLASSIFICATION INFORMATION</Description>
 <Active>1</Active>
@@ -14686,7 +14709,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>140</ID>
+<ID>137</ID>
 <Name>0215:3</Name>
 <Description>HAZARDOUS CLASSIFICATION</Description>
 <Active>1</Active>
@@ -14721,7 +14744,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>139</ID>
+<ID>136</ID>
 <Name>0983:2</Name>
 <Description>HAZARDOUS CLASS QUALIFIER</Description>
 <Active>1</Active>
@@ -14756,7 +14779,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>138</ID>
+<ID>135</ID>
 <Name>0218:3</Name>
 <Description>HAZARDOUS PLACARD NOTATION</Description>
 <Active>1</Active>
@@ -14791,7 +14814,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>137</ID>
+<ID>134</ID>
 <Name>0222:3</Name>
 <Description>HAZARDOUS ENDORSEMENT</Description>
 <Active>1</Active>
@@ -14826,7 +14849,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>136</ID>
+<ID>133</ID>
 <Name>0759:2</Name>
 <Description>REPORTABLE QUANTITY CODE</Description>
 <Active>1</Active>
@@ -14861,7 +14884,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>135</ID>
+<ID>132</ID>
 <Name>0355:17</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -14889,8 +14912,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>135</FieldID>
-<FieldID>134</FieldID>
+<FieldID>132</FieldID>
+<FieldID>131</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -14904,7 +14927,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>134</ID>
+<ID>131</ID>
 <Name>0408:4</Name>
 <Description>TEMPERATURE</Description>
 <Active>1</Active>
@@ -14939,7 +14962,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>133</ID>
+<ID>130</ID>
 <Name>0355:18</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -14967,8 +14990,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>133</FieldID>
-<FieldID>132</FieldID>
+<FieldID>130</FieldID>
+<FieldID>129</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -14982,7 +15005,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>132</ID>
+<ID>129</ID>
 <Name>0408:5</Name>
 <Description>TEMPERATURE</Description>
 <Active>1</Active>
@@ -15017,7 +15040,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>131</ID>
+<ID>128</ID>
 <Name>0355:19</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -15045,8 +15068,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>131</FieldID>
-<FieldID>130</FieldID>
+<FieldID>128</FieldID>
+<FieldID>127</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -15060,7 +15083,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>130</ID>
+<ID>127</ID>
 <Name>0408:6</Name>
 <Description>TEMPERATURE</Description>
 <Active>1</Active>
@@ -15096,7 +15119,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>129</ID>
+<ID>126</ID>
 <Name>LH3:2</Name>
 <Description>HAZARDOUS MATERIAL SHIPPING NAME</Description>
 <Active>1</Active>
@@ -15123,7 +15146,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>128</ID>
+<ID>125</ID>
 <Name>0224:2</Name>
 <Description>HAZARDOUS MATERIAL SHIPPING NAME</Description>
 <Active>1</Active>
@@ -15151,8 +15174,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>128</FieldID>
-<FieldID>127</FieldID>
+<FieldID>125</FieldID>
+<FieldID>124</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -15166,7 +15189,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>127</ID>
+<ID>124</ID>
 <Name>0984:2</Name>
 <Description>HAZARDOUS MATERIAL SHIPPING NAME QUALIFIER</Description>
 <Active>1</Active>
@@ -15201,7 +15224,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>126</ID>
+<ID>123</ID>
 <Name>0985:2</Name>
 <Description>N.O.S. INDICATOR CODE</Description>
 <Active>1</Active>
@@ -15236,7 +15259,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>125</ID>
+<ID>122</ID>
 <Name>1073:2</Name>
 <Description>YES/NO CONDITION OR RESPONSE CODE</Description>
 <Active>1</Active>
@@ -15272,7 +15295,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>124</ID>
+<ID>121</ID>
 <Name>LFH:2</Name>
 <Description>FREEFORM HAZARDOUS MATERIAL INFORMATION</Description>
 <Active>1</Active>
@@ -15299,7 +15322,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>123</ID>
+<ID>120</ID>
 <Name>0808:2</Name>
 <Description>HAZARDOUS MATERIAL SHIPMENT INFORMATION QUALIFIER</Description>
 <Active>1</Active>
@@ -15334,7 +15357,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>122</ID>
+<ID>119</ID>
 <Name>0809:3</Name>
 <Description>HAZARDOUS MATERIAL SHIPMENT INFORMATION</Description>
 <Active>1</Active>
@@ -15369,7 +15392,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>121</ID>
+<ID>118</ID>
 <Name>0809:4</Name>
 <Description>HAZARDOUS MATERIAL SHIPMENT INFORMATION</Description>
 <Active>1</Active>
@@ -15404,7 +15427,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>120</ID>
+<ID>117</ID>
 <Name>1023:2</Name>
 <Description>HAZARD ZONE CODE</Description>
 <Active>1</Active>
@@ -15439,7 +15462,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>119</ID>
+<ID>116</ID>
 <Name>0355:20</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -15467,8 +15490,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>119</FieldID>
-<FieldID>118</FieldID>
+<FieldID>116</FieldID>
+<FieldID>115</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -15482,7 +15505,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>118</ID>
+<ID>115</ID>
 <Name>0380:6</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -15517,7 +15540,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>117</ID>
+<ID>114</ID>
 <Name>0380:7</Name>
 <Description>QUANTITY</Description>
 <Active>1</Active>
@@ -15553,7 +15576,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>116</ID>
+<ID>113</ID>
 <Name>LEP:2</Name>
 <Description>EPA REQUIRED DATA</Description>
 <Active>1</Active>
@@ -15580,7 +15603,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>115</ID>
+<ID>112</ID>
 <Name>0806:2</Name>
 <Description>EPA WASTE STREAM NUMBER CODE</Description>
 <Active>1</Active>
@@ -15615,7 +15638,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>114</ID>
+<ID>111</ID>
 <Name>0807:2</Name>
 <Description>WASTE CHARACTERISTICS CODE</Description>
 <Active>1</Active>
@@ -15650,7 +15673,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>113</ID>
+<ID>110</ID>
 <Name>0156:5</Name>
 <Description>STATE OR PROVINCE CODE</Description>
 <Active>1</Active>
@@ -15678,8 +15701,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>113</FieldID>
-<FieldID>112</FieldID>
+<FieldID>110</FieldID>
+<FieldID>109</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -15693,7 +15716,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>112</ID>
+<ID>109</ID>
 <Name>0127:10</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -15729,7 +15752,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>111</ID>
+<ID>108</ID>
 <Name>LH4:2</Name>
 <Description>CANADIAN DANGEROUS REQUIREMENTS</Description>
 <Active>1</Active>
@@ -15756,7 +15779,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>110</ID>
+<ID>107</ID>
 <Name>0238:2</Name>
 <Description>EMERGENCY RESPONSE PLAN NUMBER</Description>
 <Active>1</Active>
@@ -15791,7 +15814,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>109</ID>
+<ID>106</ID>
 <Name>0364:7</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -15826,7 +15849,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>108</ID>
+<ID>105</ID>
 <Name>0254:4</Name>
 <Description>PACKING GROUP CODE</Description>
 <Active>1</Active>
@@ -15861,7 +15884,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>107</ID>
+<ID>104</ID>
 <Name>0230:4</Name>
 <Description>SUBSIDIARY CLASSIFICATION</Description>
 <Active>1</Active>
@@ -15896,7 +15919,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>106</ID>
+<ID>103</ID>
 <Name>0230:5</Name>
 <Description>SUBSIDIARY CLASSIFICATION</Description>
 <Active>1</Active>
@@ -15931,7 +15954,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>105</ID>
+<ID>102</ID>
 <Name>0230:6</Name>
 <Description>SUBSIDIARY CLASSIFICATION</Description>
 <Active>1</Active>
@@ -15966,7 +15989,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>104</ID>
+<ID>101</ID>
 <Name>0271:2</Name>
 <Description>SUBSIDIARY RISK INDICATOR</Description>
 <Active>1</Active>
@@ -16001,7 +16024,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>103</ID>
+<ID>100</ID>
 <Name>0267:2</Name>
 <Description>NET EXPLOSIVE QUANTITY</Description>
 <Active>1</Active>
@@ -16029,8 +16052,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>103</FieldID>
-<FieldID>99</FieldID>
+<FieldID>100</FieldID>
+<FieldID>96</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -16044,7 +16067,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>102</ID>
+<ID>99</ID>
 <Name>0805:2</Name>
 <Description>CANADIAN HAZARDOUS NOTATION</Description>
 <Active>1</Active>
@@ -16079,7 +16102,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>101</ID>
+<ID>98</ID>
 <Name>0986:2</Name>
 <Description>SPECIAL COMMODITY INDICATOR CODE</Description>
 <Active>1</Active>
@@ -16114,7 +16137,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>100</ID>
+<ID>97</ID>
 <Name>0364:8</Name>
 <Description>COMMUNICATION NUMBER</Description>
 <Active>1</Active>
@@ -16149,7 +16172,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>99</ID>
+<ID>96</ID>
 <Name>0355:21</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -16185,7 +16208,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>98</ID>
+<ID>95</ID>
 <Name>LHT:2</Name>
 <Description>TRANSBORDER HAZARDOUS REQUIREMENTS</Description>
 <Active>1</Active>
@@ -16212,7 +16235,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>97</ID>
+<ID>94</ID>
 <Name>0215:4</Name>
 <Description>HAZARDOUS CLASSIFICATION</Description>
 <Active>1</Active>
@@ -16247,7 +16270,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>96</ID>
+<ID>93</ID>
 <Name>0218:4</Name>
 <Description>HAZARDOUS PLACARD NOTATION</Description>
 <Active>1</Active>
@@ -16282,7 +16305,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>95</ID>
+<ID>92</ID>
 <Name>0222:4</Name>
 <Description>HAZARDOUS ENDORSEMENT</Description>
 <Active>1</Active>
@@ -16318,7 +16341,7 @@
 </Field></Segment></Group></Group></Group>
 </Group>
 <Group>
-<ID>94</ID>
+<ID>91</ID>
 <Name>0380_N7</Name>
 <Description></Description>
 <Active>1</Active>
@@ -16331,7 +16354,7 @@
 <OrderingType>0</OrderingType>
 <OrderingTag></OrderingTag>
 <UsageRelatedFieldName/><Segment>
-<ID>93</ID>
+<ID>90</ID>
 <Name>N7:2</Name>
 <Description>EQUIPMENT DETAILS</Description>
 <Active>1</Active>
@@ -16358,7 +16381,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>92</ID>
+<ID>89</ID>
 <Name>0206:2</Name>
 <Description>EQUIPMENT INITIAL</Description>
 <Active>1</Active>
@@ -16393,7 +16416,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>91</ID>
+<ID>88</ID>
 <Name>0207:2</Name>
 <Description>EQUIPMENT NUMBER</Description>
 <Active>1</Active>
@@ -16428,7 +16451,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>90</ID>
+<ID>87</ID>
 <Name>0081:11</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -16456,8 +16479,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>90</FieldID>
-<FieldID>89</FieldID>
+<FieldID>87</FieldID>
+<FieldID>86</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -16471,7 +16494,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>89</ID>
+<ID>86</ID>
 <Name>0187:5</Name>
 <Description>WEIGHT QUALIFIER</Description>
 <Active>1</Active>
@@ -16506,7 +16529,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>88</ID>
+<ID>85</ID>
 <Name>0167:2</Name>
 <Description>TARE WEIGHT</Description>
 <Active>1</Active>
@@ -16534,8 +16557,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>88</FieldID>
-<FieldID>77</FieldID>
+<FieldID>85</FieldID>
+<FieldID>74</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -16549,7 +16572,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>87</ID>
+<ID>84</ID>
 <Name>0232:2</Name>
 <Description>WEIGHT ALLOWANCE</Description>
 <Active>1</Active>
@@ -16584,7 +16607,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>86</ID>
+<ID>83</ID>
 <Name>0205:2</Name>
 <Description>DUNNAGE</Description>
 <Active>1</Active>
@@ -16619,7 +16642,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>85</ID>
+<ID>82</ID>
 <Name>0183:7</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -16647,8 +16670,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>85</FieldID>
-<FieldID>84</FieldID>
+<FieldID>82</FieldID>
+<FieldID>81</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -16662,7 +16685,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>84</ID>
+<ID>81</ID>
 <Name>0184:7</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -16697,7 +16720,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>83</ID>
+<ID>80</ID>
 <Name>0102:2</Name>
 <Description>OWNERSHIP CODE</Description>
 <Active>1</Active>
@@ -16732,7 +16755,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>82</ID>
+<ID>79</ID>
 <Name>0040:2</Name>
 <Description>EQUIPMENT DESCRIPTION CODE</Description>
 <Active>1</Active>
@@ -16767,7 +16790,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>81</ID>
+<ID>78</ID>
 <Name>0140:5</Name>
 <Description>STANDARD CARRIER ALPHA CODE</Description>
 <Active>1</Active>
@@ -16802,7 +16825,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>80</ID>
+<ID>77</ID>
 <Name>0319:2</Name>
 <Description>TEMPERATURE CONTROL</Description>
 <Active>1</Active>
@@ -16837,7 +16860,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>79</ID>
+<ID>76</ID>
 <Name>0219:2</Name>
 <Description>POSITION</Description>
 <Active>1</Active>
@@ -16872,7 +16895,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>78</ID>
+<ID>75</ID>
 <Name>0567:2</Name>
 <Description>EQUIPMENT LENGTH</Description>
 <Active>1</Active>
@@ -16907,7 +16930,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>77</ID>
+<ID>74</ID>
 <Name>0571:2</Name>
 <Description>TARE QUALIFIER CODE</Description>
 <Active>1</Active>
@@ -16942,7 +16965,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>76</ID>
+<ID>73</ID>
 <Name>0188:14</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -16977,7 +17000,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>75</ID>
+<ID>72</ID>
 <Name>0761:2</Name>
 <Description>EQUIPMENT NUMBER CHECK DIGIT</Description>
 <Active>1</Active>
@@ -17012,7 +17035,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>74</ID>
+<ID>71</ID>
 <Name>0056:2</Name>
 <Description>TYPE OF SERVICE CODE</Description>
 <Active>1</Active>
@@ -17047,7 +17070,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>73</ID>
+<ID>70</ID>
 <Name>0065:2</Name>
 <Description>HEIGHT</Description>
 <Active>1</Active>
@@ -17082,7 +17105,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>72</ID>
+<ID>69</ID>
 <Name>0189:2</Name>
 <Description>WIDTH</Description>
 <Active>1</Active>
@@ -17117,7 +17140,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>71</ID>
+<ID>68</ID>
 <Name>0024:2</Name>
 <Description>EQUIPMENT TYPE</Description>
 <Active>1</Active>
@@ -17152,7 +17175,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>70</ID>
+<ID>67</ID>
 <Name>0140:6</Name>
 <Description>STANDARD CARRIER ALPHA CODE</Description>
 <Active>1</Active>
@@ -17187,7 +17210,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>69</ID>
+<ID>66</ID>
 <Name>0301:2</Name>
 <Description>CAR TYPE CODE</Description>
 <Active>1</Active>
@@ -17223,7 +17246,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>68</ID>
+<ID>65</ID>
 <Name>N7A:2</Name>
 <Description>ACCESSORIAL EQUIPMENT DETAILS</Description>
 <Active>1</Active>
@@ -17250,7 +17273,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>67</ID>
+<ID>64</ID>
 <Name>1042:2</Name>
 <Description>LOAD OR DEVICE CODE</Description>
 <Active>1</Active>
@@ -17285,7 +17308,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>66</ID>
+<ID>63</ID>
 <Name>0082:2</Name>
 <Description>LENGTH</Description>
 <Active>1</Active>
@@ -17320,7 +17343,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>65</ID>
+<ID>62</ID>
 <Name>1043:4</Name>
 <Description>DIAMETER</Description>
 <Active>1</Active>
@@ -17355,7 +17378,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>64</ID>
+<ID>61</ID>
 <Name>1044:2</Name>
 <Description>HOSE TYPE CODE</Description>
 <Active>1</Active>
@@ -17390,7 +17413,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>63</ID>
+<ID>60</ID>
 <Name>1043:5</Name>
 <Description>DIAMETER</Description>
 <Active>1</Active>
@@ -17425,7 +17448,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>62</ID>
+<ID>59</ID>
 <Name>1043:6</Name>
 <Description>DIAMETER</Description>
 <Active>1</Active>
@@ -17460,7 +17483,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>61</ID>
+<ID>58</ID>
 <Name>1045:2</Name>
 <Description>INLET OR OUTLET MATERIAL TYPE CODE</Description>
 <Active>1</Active>
@@ -17495,7 +17518,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>60</ID>
+<ID>57</ID>
 <Name>1046:2</Name>
 <Description>INLET OR OUTLET FITTING TYPE CODE</Description>
 <Active>1</Active>
@@ -17530,7 +17553,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>59</ID>
+<ID>56</ID>
 <Name>1047:2</Name>
 <Description>MISCELLANEOUS EQUIPMENT CODE</Description>
 <Active>1</Active>
@@ -17566,7 +17589,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>58</ID>
+<ID>55</ID>
 <Name>N7B:2</Name>
 <Description>ADDITIONAL EQUIPMENT DETAILS</Description>
 <Active>1</Active>
@@ -17593,7 +17616,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>57</ID>
+<ID>54</ID>
 <Name>1024:2</Name>
 <Description>NUMBER OF TANK COMPARTMENTS</Description>
 <Active>1</Active>
@@ -17628,7 +17651,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>56</ID>
+<ID>53</ID>
 <Name>1025:2</Name>
 <Description>LOADING OR DISCHARGE LOCATION CODE</Description>
 <Active>1</Active>
@@ -17663,7 +17686,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>55</ID>
+<ID>52</ID>
 <Name>1026:2</Name>
 <Description>VESSEL MATERIAL CODE</Description>
 <Active>1</Active>
@@ -17698,7 +17721,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>54</ID>
+<ID>51</ID>
 <Name>1030:2</Name>
 <Description>GASKET TYPE CODE</Description>
 <Active>1</Active>
@@ -17733,7 +17756,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>53</ID>
+<ID>50</ID>
 <Name>1031:2</Name>
 <Description>TRAILER LINING TYPE CODE</Description>
 <Active>1</Active>
@@ -17768,7 +17791,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>52</ID>
+<ID>49</ID>
 <Name>0127:11</Name>
 <Description>REFERENCE IDENTIFICATION</Description>
 <Active>1</Active>
@@ -17804,7 +17827,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>51</ID>
+<ID>48</ID>
 <Name>MEA:2</Name>
 <Description>MEASUREMENTS</Description>
 <Active>1</Active>
@@ -17831,7 +17854,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>50</ID>
+<ID>47</ID>
 <Name>0737:2</Name>
 <Description>MEASUREMENT REFERENCE ID CODE</Description>
 <Active>1</Active>
@@ -17866,7 +17889,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>49</ID>
+<ID>46</ID>
 <Name>0738:2</Name>
 <Description>MEASUREMENT QUALIFIER</Description>
 <Active>1</Active>
@@ -17901,7 +17924,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>48</ID>
+<ID>45</ID>
 <Name>0739:2</Name>
 <Description>MEASUREMENT VALUE</Description>
 <Active>1</Active>
@@ -17929,10 +17952,10 @@
 <RelationCode>required</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>48</FieldID>
-<FieldID>31</FieldID>
-<FieldID>30</FieldID>
+<FieldID>45</FieldID>
 <FieldID>28</FieldID>
+<FieldID>27</FieldID>
+<FieldID>25</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -17946,7 +17969,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Composite>
-<ID>47</ID>
+<ID>44</ID>
 <Name>C001</Name>
 <Description></Description>
 <Active>1</Active>
@@ -17957,7 +17980,7 @@
 <MaxUsage>1</MaxUsage>
 <TreatAsRepeat>no</TreatAsRepeat>
 <Field>
-<ID>46</ID>
+<ID>43</ID>
 <Name>0355:22</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -17992,7 +18015,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>45</ID>
+<ID>42</ID>
 <Name>1018:6</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -18027,7 +18050,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>44</ID>
+<ID>41</ID>
 <Name>0649:6</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -18062,7 +18085,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>43</ID>
+<ID>40</ID>
 <Name>0355:23</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -18097,7 +18120,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>42</ID>
+<ID>39</ID>
 <Name>1018:7</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -18132,7 +18155,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>41</ID>
+<ID>38</ID>
 <Name>0649:7</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -18167,7 +18190,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>40</ID>
+<ID>37</ID>
 <Name>0355:24</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -18202,7 +18225,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>39</ID>
+<ID>36</ID>
 <Name>1018:8</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -18237,7 +18260,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>38</ID>
+<ID>35</ID>
 <Name>0649:8</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -18272,7 +18295,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>37</ID>
+<ID>34</ID>
 <Name>0355:25</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -18307,7 +18330,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>36</ID>
+<ID>33</ID>
 <Name>1018:9</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -18342,7 +18365,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>35</ID>
+<ID>32</ID>
 <Name>0649:9</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -18377,7 +18400,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>34</ID>
+<ID>31</ID>
 <Name>0355:26</Name>
 <Description>UNIT OR BASIS FOR MEASUREMENT CODE</Description>
 <Active>1</Active>
@@ -18412,7 +18435,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>33</ID>
+<ID>30</ID>
 <Name>1018:10</Name>
 <Description>EXPONENT</Description>
 <Active>1</Active>
@@ -18447,7 +18470,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>32</ID>
+<ID>29</ID>
 <Name>0649:10</Name>
 <Description>MULTIPLIER</Description>
 <Active>1</Active>
@@ -18483,7 +18506,7 @@
 </Field>
 </Composite>
 <Field>
-<ID>31</ID>
+<ID>28</ID>
 <Name>0740:2</Name>
 <Description>RANGE MINIMUM</Description>
 <Active>1</Active>
@@ -18511,8 +18534,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>31</FieldID>
-<FieldID>47</FieldID>
+<FieldID>28</FieldID>
+<FieldID>44</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -18526,7 +18549,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>30</ID>
+<ID>27</ID>
 <Name>0741:2</Name>
 <Description>RANGE MAXIMUM</Description>
 <Active>1</Active>
@@ -18554,8 +18577,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>30</FieldID>
-<FieldID>47</FieldID>
+<FieldID>27</FieldID>
+<FieldID>44</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -18569,7 +18592,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>29</ID>
+<ID>26</ID>
 <Name>0935:2</Name>
 <Description>MEASUREMENT SIGNIFICANCE CODE</Description>
 <Active>1</Active>
@@ -18597,10 +18620,10 @@
 <RelationCode>listconditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>29</FieldID>
-<FieldID>48</FieldID>
-<FieldID>31</FieldID>
-<FieldID>30</FieldID>
+<FieldID>26</FieldID>
+<FieldID>45</FieldID>
+<FieldID>28</FieldID>
+<FieldID>27</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -18614,7 +18637,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>28</ID>
+<ID>25</ID>
 <Name>0936:2</Name>
 <Description>MEASUREMENT ATTRIBUTE CODE</Description>
 <Active>1</Active>
@@ -18642,8 +18665,8 @@
 <RelationCode>exclusion</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>28</FieldID>
-<FieldID>48</FieldID>
+<FieldID>25</FieldID>
+<FieldID>45</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -18657,7 +18680,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>27</ID>
+<ID>24</ID>
 <Name>0752:2</Name>
 <Description>SURFACE/LAYER/POSITION CODE</Description>
 <Active>1</Active>
@@ -18692,7 +18715,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>26</ID>
+<ID>23</ID>
 <Name>1373:2</Name>
 <Description>MEASUREMENT METHOD OR DEVICE</Description>
 <Active>1</Active>
@@ -18728,7 +18751,7 @@
 </Field>
 </Segment>
 <Segment>
-<ID>25</ID>
+<ID>22</ID>
 <Name>M7:2</Name>
 <Description>SEAL NUMBERS</Description>
 <Active>1</Active>
@@ -18755,7 +18778,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>24</ID>
+<ID>21</ID>
 <Name>0225:5</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -18790,7 +18813,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>23</ID>
+<ID>20</ID>
 <Name>0225:6</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -18825,7 +18848,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>22</ID>
+<ID>19</ID>
 <Name>0225:7</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -18860,7 +18883,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>21</ID>
+<ID>18</ID>
 <Name>0225:8</Name>
 <Description>SEAL NUMBER</Description>
 <Active>1</Active>
@@ -18895,7 +18918,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>20</ID>
+<ID>17</ID>
 <Name>0098:6</Name>
 <Description>ENTITY IDENTIFIER CODE</Description>
 <Active>1</Active>
@@ -18931,7 +18954,7 @@
 </Field></Segment></Group>
 </Group>
 <Segment>
-<ID>19</ID>
+<ID>16</ID>
 <Name>L3</Name>
 <Description>TOTAL WEIGHT AND CHARGES</Description>
 <Active>1</Active>
@@ -18958,7 +18981,7 @@
 <Binary>no</Binary>
 <Float>no</Float>
 <Field>
-<ID>18</ID>
+<ID>15</ID>
 <Name>0081:12</Name>
 <Description>WEIGHT</Description>
 <Active>1</Active>
@@ -18986,8 +19009,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>18</FieldID>
-<FieldID>17</FieldID>
+<FieldID>15</FieldID>
+<FieldID>14</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -19001,7 +19024,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>17</ID>
+<ID>14</ID>
 <Name>0187:6</Name>
 <Description>WEIGHT QUALIFIER</Description>
 <Active>1</Active>
@@ -19036,7 +19059,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>16</ID>
+<ID>13</ID>
 <Name>0060</Name>
 <Description>FREIGHT RATE</Description>
 <Active>1</Active>
@@ -19064,8 +19087,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>16</FieldID>
-<FieldID>15</FieldID>
+<FieldID>13</FieldID>
+<FieldID>12</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -19079,7 +19102,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>15</ID>
+<ID>12</ID>
 <Name>0122</Name>
 <Description>RATE/VALUE QUALIFIER</Description>
 <Active>1</Active>
@@ -19114,7 +19137,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>14</ID>
+<ID>11</ID>
 <Name>0058</Name>
 <Description>CHARGE</Description>
 <Active>1</Active>
@@ -19149,7 +19172,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>13</ID>
+<ID>10</ID>
 <Name>0191</Name>
 <Description>ADVANCES</Description>
 <Active>1</Active>
@@ -19184,7 +19207,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>12</ID>
+<ID>9</ID>
 <Name>0117</Name>
 <Description>PREPAID AMOUNT</Description>
 <Active>1</Active>
@@ -19219,7 +19242,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>11</ID>
+<ID>8</ID>
 <Name>0150</Name>
 <Description>SPECIAL CHARGE OR ALLOWANCE CODE</Description>
 <Active>1</Active>
@@ -19254,7 +19277,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>10</ID>
+<ID>7</ID>
 <Name>0183:8</Name>
 <Description>VOLUME</Description>
 <Active>1</Active>
@@ -19282,8 +19305,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>10</FieldID>
-<FieldID>9</FieldID>
+<FieldID>7</FieldID>
+<FieldID>6</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -19297,7 +19320,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>9</ID>
+<ID>6</ID>
 <Name>0184:8</Name>
 <Description>VOLUME UNIT QUALIFIER</Description>
 <Active>1</Active>
@@ -19332,7 +19355,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>8</ID>
+<ID>5</ID>
 <Name>0080:11</Name>
 <Description>LADING QUANTITY</Description>
 <Active>1</Active>
@@ -19367,7 +19390,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>7</ID>
+<ID>4</ID>
 <Name>0188:15</Name>
 <Description>WEIGHT UNIT CODE</Description>
 <Active>1</Active>
@@ -19395,8 +19418,8 @@
 <RelationCode>conditional</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>7</FieldID>
-<FieldID>18</FieldID>
+<FieldID>4</FieldID>
+<FieldID>15</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -19410,7 +19433,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>6</ID>
+<ID>3</ID>
 <Name>0171</Name>
 <Description>TARIFF NUMBER</Description>
 <Active>1</Active>
@@ -19445,7 +19468,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>5</ID>
+<ID>2</ID>
 <Name>0074</Name>
 <Description>DECLARED VALUE</Description>
 <Active>1</Active>
@@ -19473,8 +19496,8 @@
 <RelationCode>paired/multiple</RelationCode>
 <RelationIndex>0</RelationIndex>
 <SubjectElement>
-<FieldID>5</FieldID>
-<FieldID>4</FieldID>
+<FieldID>2</FieldID>
+<FieldID>1</FieldID>
 </SubjectElement>
 </ConditionalRuleDef>
 <Element>0</Element>
@@ -19488,7 +19511,7 @@
 <AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
 </Field>
 <Field>
-<ID>4</ID>
+<ID>1</ID>
 <Name>0122:2</Name>
 <Description>RATE/VALUE QUALIFIER</Description>
 <Active>1</Active>
@@ -19503,100 +19526,6 @@
 <StoreLimit>
 <MaxLen>2</MaxLen>
 <MinLen>2</MinLen>
-<Signed>no</Signed>
-<DataType>string</DataType>
-<ImpliedDecimalPos>0</ImpliedDecimalPos>
-<ImplicitDecimal>no</ImplicitDecimal>
-<AllowSignedDecimal>0</AllowSignedDecimal>
-<Format>X</Format>
-<BinaryOutput>0</BinaryOutput>
-<BinaryWidth>0</BinaryWidth>
-</StoreLimit>
-<Element>0</Element>
-<ElementOpt>0</ElementOpt>
-<SubElement>0</SubElement>
-<SubElementOpt>0</SubElementOpt>
-<MinUsage>0</MinUsage>
-<MaxUsage>1</MaxUsage>
-<Binary>0</Binary>
-<TreatAsRepeat>no</TreatAsRepeat>
-<AlwaysOutputDelimiter>no</AlwaysOutputDelimiter>
-</Field></Segment></Group></EDISyntax></INPUT><OUTPUT>
-<EDISyntax>
-<TagDelimiterUsed>no</TagDelimiterUsed>
-<TagDelimiter/><SegmentDelimiterUsed>no</SegmentDelimiterUsed>
-<SegmentDelimiter/><ElementDelimiterUsed>no</ElementDelimiterUsed>
-<ElementDelimiter/><RepeatingElementDelimiterUsed>no</RepeatingElementDelimiterUsed>
-<RepeatingElementDelimiter/><SubElementDelimiterUsed>no</SubElementDelimiterUsed>
-<SubElementDelimiter/><ReleaseCharacterUsed>no</ReleaseCharacterUsed>
-<ReleaseCharacter/><DecimalSeparatorUsed>no</DecimalSeparatorUsed>
-<DecimalSeparator/><SyntaxRecordUsed>no</SyntaxRecordUsed>
-<StreamData>0</StreamData>
-<CharacterEncoding></CharacterEncoding>
-<HIPPADecimal>0</HIPPADecimal>
-<DefaultPadSup>1</DefaultPadSup>
-<PadZero>0</PadZero>
-<RepeatSuppressionCharUsed>no</RepeatSuppressionCharUsed>
-<RepeatSuppressionChar/><AlwaysOutputDelimiters>no</AlwaysOutputDelimiters>
-<EOFTerminatesLastSegment>no</EOFTerminatesLastSegment>
-<FixedLengthElementsNotDelimited>no</FixedLengthElementsNotDelimited>
-<DelimiterTerminatesCurrentElement>no</DelimiterTerminatesCurrentElement>
-<Group>
-<ID>3</ID>
-<Name>INPUT</Name>
-<Description></Description>
-<Active>1</Active>
-<ChildCount>1</ChildCount>
-<Note></Note>
-<Min>0</Min>
-<Max>1</Max>
-<PromoteGroup>no</PromoteGroup>
-<GroupChoiceType>0</GroupChoiceType>
-<OrderingType>0</OrderingType>
-<OrderingTag></OrderingTag>
-<UsageRelatedFieldName/><Segment>
-<ID>2</ID>
-<Name>HDR</Name>
-<Description></Description>
-<Active>1</Active>
-<ChildCount>1</ChildCount>
-<Note></Note>
-<Min>0</Min>
-<Max>1</Max>
-<LoopCtl>normal</LoopCtl>
-<OrderingType>0</OrderingType>
-<OrderingTag></OrderingTag>
-<UsageRelatedFieldName/><BlockSig>
-<Tag></Tag>
-<TagPos>0</TagPos>
-<KeyFieldID>0</KeyFieldID>
-<KeyFieldData>0</KeyFieldData>
-<KeyFieldAction>65535</KeyFieldAction>
-<Tag></Tag>
-<TagPos>0</TagPos>
-<KeyFieldID>0</KeyFieldID>
-<KeyFieldData>0</KeyFieldData>
-<KeyFieldAction>0</KeyFieldAction>
-</BlockSig>
-<WildCard>no</WildCard>
-<Binary>no</Binary>
-<Float>no</Float>
-<Field>
-<ID>1</ID>
-<Name>FILLER</Name>
-<Description></Description>
-<Active>1</Active>
-<ChildCount>0</ChildCount>
-<Note></Note>
-<Mandatory>yes</Mandatory>
-<NotUsed>no</NotUsed>
-<FieldNumber>0</FieldNumber>
-<StoreGroup>65535</StoreGroup>
-<StoreField>65535</StoreField>
-<BusinessName></BusinessName>
-<StoreLimit>
-<MaxLen>10</MaxLen>
-<MinLen>0</MinLen>
 <Signed>no</Signed>
 <DataType>string</DataType>
 <ImpliedDecimalPos>0</ImpliedDecimalPos>

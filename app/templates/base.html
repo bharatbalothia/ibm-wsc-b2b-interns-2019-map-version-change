@@ -9,14 +9,25 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script>
-              function map_generated() {
-                  alert('Wait Until Map is Processing');
-              }
-          </script>
+
     </head>
     <body>
         
         {% block content %}{% endblock %}
+    <script>
+              $("#select_transaction").change(function() {
+            console.log($("#select_transaction").val())
+            $.ajax({
+                type: "POST",
+                url: "{{ url_for('get_versions') }}",
+                data: {
+                    transaction: $("#select_transaction").val()
+                },
+                success: function(data) {
+                    $("#select_version").html(data.html_string_selected);
+                }
+            });
+        });
+          </script>
     </body>
 </html>

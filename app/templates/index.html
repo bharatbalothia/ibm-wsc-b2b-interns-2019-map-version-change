@@ -5,6 +5,7 @@
 	    <div class="container-fluid">
 	        <ul class="nav navbar-nav">
 	            <li><a href="{{ url_for('version_change') }}">Home</a></li>
+                <li><a href="/report_file">Templates</a></li>
 	            <li><a href="{{ url_for('logout') }}">Logout</a></li>
 	        </ul>
 	        <ul class="nav navbar-nav navbar-right">
@@ -30,24 +31,32 @@
 
 	<center class="well well-warning"><h2>Map Version Change</h2></center>
 
+
 	<form class="form-inline" method="POST" action="uploader_basemap" enctype = "multipart/form-data">
 
 		<div class="form-group">
 			
 			<div class="row">	
-					<div class="row col-lg-6">
-					<label for="asd" class="col-lg-6" style="padding-left: 100px;margin-top: 10px;">Upload baseMap</label>
+					<div class="row col-lg-3">
+					<label for="asd" class="col-lg-3" style="padding-left: 20px;margin-top: 10px;">Upload baseMap</label>
 				<div  class="col-lg-6" style="margin-top: 10px;">
 					<input type = "file" name = "file" id="asd" value="Upload BaseMap" accept=".mxl,.ddf,.xml" />
 				</div>
 					</div>
+            <div class="col-lg-3" style="margin-top: 10px;">
+		    		<div class="input-group">
+		        		<span class="input-group-addon">Select Transaction</span>
+		            	<select name="select_transaction" id="select_transaction" class="form-control">
+		              		{% for v in transactions %}
+		              		<option value="{{ v }}">{{ v }}</option>
+		              		{% endfor %}
+		            	</select>
+		 			</div>
+				</div>
 	    		<div class="col-lg-3" style="margin-top: 10px;">	
 		    		<div class="input-group">
 		        		<span class="input-group-addon">Select New Version</span>
-		            	<select name="select_version" class="form-control">
-		              		{% for v in newversion %}
-		              		<option value="{{ v.version }}">{{ v.version }}</option>
-		              		{% endfor %}
+		            	<select name="select_version" id="select_version" class="form-control">
 		            	</select>
 		 			</div>
 				</div>
@@ -60,5 +69,8 @@
 		    <span style="padding-left: 480px;"><button type="submit" class="btn btn-lg btn-primary" style="width:200px;">Submit</button></span>
 		</div>
 	</form>
+    <br>
+    <br>
+    <h5 style="color: red;">{{ error }}</h5>
 	</div>
 {% endblock %}

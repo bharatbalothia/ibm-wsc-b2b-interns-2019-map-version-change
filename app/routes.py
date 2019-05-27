@@ -1,10 +1,15 @@
 from app import app
-from flask import render_template, redirect, request, url_for, send_file, session
+from flask import render_template, redirect, request, url_for, send_file, session, jsonify
 from werkzeug.utils import secure_filename
 from datetime import timedelta
 import cProfile, pstats, io
 from authenticate import authenticate
 from versionChanger import change
+import os
+import couchdb
+
+couchserver = couchdb.Server("http://%s:%s@9.199.145.193:5984/" % ("admin", "admin123"))
+segment_db = couchserver["segmentusagedefs"]
 
 
 def profile(fnc):
@@ -63,98 +68,90 @@ def ldapAuth():
         return redirect(url_for('version_change'))
 
 
+@app.route('/get_versions',methods=['POST'])
+def get_versions():
+    print("called")
+    trans = request.form.get('transaction')
+    print(trans)
+    versions = {data.value for data in segment_db.view('_design/version-seg/_view/version-seg', key=trans)}
+    html_string_selected = ''
+    for entry in versions:
+        html_string_selected += '<option value="{}">{}</option>'.format(entry, entry)
+    return jsonify(html_string_selected=html_string_selected)
+
+
 @app.route('/version_change')
 def version_change():
-    session['newversion'] = [{'version': '00201'}, {'version': '00204'}, {'version': '002001'},
-                             {'version': '002001FORD'}, {'version': '002002'}, {'version': '002002CHRY'},
-                             {'version': '002002FORD'}, {'version': '002002VICS'}, {'version': '002003'},
-                             {'version': '002003FORD'}, {'version': '002003GM'}, {'version': '002003VICS'},
-                             {'version': '002040'}, {'version': '002040CHRY'}, {'version': '002040GM'},
-                             {'version': '002040NAV'}, {'version': '002040VICS'}, {'version': '00300'},
-                             {'version': '00301'}, {'version': '00302'}, {'version': '00303'}, {'version': '00304'},
-                             {'version': '00305'}, {'version': '00306'}, {'version': '00307'}, {'version': '003010'},
-                             {'version': '003010CHRY'}, {'version': '003010FORD'}, {'version': '003010GM'},
-                             {'version': '003010UCS'}, {'version': '003010VICS'}, {'version': '003011'},
-                             {'version': '003012'}, {'version': '003020'}, {'version': '003020AIAG'},
-                             {'version': '003020M'}, {'version': '003020RAIL'}, {'version': '003020UCS'},
-                             {'version': '003020VICS'}, {'version': '003021'}, {'version': '003022'},
-                             {'version': '003030'}, {'version': '003030CHRY'}, {'version': '003030GM'},
-                             {'version': '003030RAIL'}, {'version': '003030UCS'}, {'version': '003030VICS'},
-                             {'version': '003031'}, {'version': '003032'}, {'version': '003032FORD'},
-                             {'version': '003040'}, {'version': '003040AIAG'}, {'version': '003040NAV'},
-                             {'version': '003040RAIL'}, {'version': '003040RIGMAT'}, {'version': '003040UCS'},
-                             {'version': '003040VICS'}, {'version': '003041'}, {'version': '003042'},
-                             {'version': '003042CBC'}, {'version': '003050'}, {'version': '003050AIAG'},
-                             {'version': '003050RAIL'}, {'version': '003050RIFMAT'}, {'version': '003050UCS'},
-                             {'version': '003050VICS'}, {'version': '003051'}, {'version': '003052'},
-                             {'version': '003060'}, {'version': '003060AIAG'}, {'version': '003060BISAC'},
-                             {'version': '003060RAIL'}, {'version': '003060RIFMAT'}, {'version': '003060UCS'},
-                             {'version': '003060VICS'}, {'version': '003061'}, {'version': '003062'},
-                             {'version': '003070'}, {'version': '003070RAIL'}, {'version': '003070UCS'},
-                             {'version': '003070VICS'}, {'version': '003071'}, {'version': '003072'},
-                             {'version': '00400'}, {'version': '00401'}, {'version': '00402'}, {'version': '00403'},
-                             {'version': '00404'}, {'version': '00405'}, {'version': '00406'}, {'version': '004010'},
-                             {'version': '004010AIAG'}, {'version': '004010RAIL'}, {'version': '004010RIFMAT'},
-                             {'version': '004010TI0900'}, {'version': '004010UCS'}, {'version': '004010VICS'},
-                             {'version': '004011'}, {'version': '004012'}, {'version': '004020'},
-                             {'version': '004020RAIL'}, {'version': '004020UCS'}, {'version': '004020VICS'},
-                             {'version': '004021'}, {'version': '004022'}, {'version': '004030'},
-                             {'version': '004030RAIL'}, {'version': '004030RIFMAT'}, {'version': '004030UCS'},
-                             {'version': '004030VICS'}, {'version': '004031'}, {'version': '004032'},
-                             {'version': '004035RAIL'}, {'version': '004040'}, {'version': '004040RAIL'},
-                             {'version': '004040UCS'}, {'version': '004040VICS'}, {'version': '004041'},
-                             {'version': '004042'}, {'version': '004050'}, {'version': '004050RAIL'},
-                             {'version': '004050UCS'}, {'version': '004050VICS'}, {'version': '004051'},
-                             {'version': '004052'}, {'version': '004060'}, {'version': '004060RAIL'},
-                             {'version': '004060RIFMAT'}, {'version': '004060UCS'}, {'version': '004060VICS'},
-                             {'version': '004061'}, {'version': '004062'}, {'version': '00500'}, {'version': '00501'},
-                             {'version': '00502'}, {'version': '00503'}, {'version': '00504'}, {'version': '00505'},
-                             {'version': '005010'}, {'version': '005010RAIL'}, {'version': '005010UCS'},
-                             {'version': '005010VICS'}, {'version': '005011'}, {'version': '005012'},
-                             {'version': '005020'}, {'version': '005020RAIL'}, {'version': '005020UCS'},
-                             {'version': '005020VICS'}, {'version': '005021'}, {'version': '005022'},
-                             {'version': '005030'}, {'version': '005030RAIL'}, {'version': '005030UCS'},
-                             {'version': '005030VICS'}, {'version': '005031'}, {'version': '005032'},
-                             {'version': '005040'}, {'version': '005040RAIL'}, {'version': '005040UCS'},
-                             {'version': '005040VICS'}, {'version': '005041'}, {'version': '005042'},
-                             {'version': '005050'}, {'version': '005050RAIL'}, {'version': '005051'},
-                             {'version': '005052'}, {'version': '00600'}, {'version': '00601'}, {'version': '00602'},
-                             {'version': '006010'}, {'version': '006010RAIL'}, {'version': '006011'},
-                             {'version': '006012'}, {'version': '006020'}, {'version': '006020RAIL'},
-                             {'version': '006021'}, {'version': '006022'}]
-    return render_template('index.html', title='Home', user=session['username'], newversion=session['newversion'])
+    if  'Transactions' not in session:
+        session['Transactions'] = [data.key for data in segment_db.view('_design/all-transactions/_view/all-transactions',group=True)]
+        transactions = session['Transactions']
+    else:
+        transactions = session['Transactions']
+    return render_template('index.html', title='Home', user=session['username'], transactions=transactions)
 
 
 @app.route('/uploader_basemap', methods=['GET', 'POST'])
 def upload_basemap_file():
     if request.method == 'POST':
         f = request.files['file']
+        transaction = request.form.get('select_transaction')
         f.save("C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\basemap\\" + secure_filename(f.filename))
         Targetversion = request.form.get('select_version')
+        print(f.filename)
+        map_name_get = request.form.get('Map')
+        if f.filename.split(".")[0].split("_")[-1] in Targetversion or f.filename == map_name_get:
+            error = "Both Target and Base versions are same. No Conversion required."
+            return render_template('index.html', title='Home', user=session['username'],
+                                   transactions=session['Transactions'], error=error)
+
+        try:
+            variable = int(Targetversion)
+        except ValueError:
+            variable = Targetversion
         basefile = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\basemap\\" + f.filename
 
-        map_name_get = request.form.get('Map')
+
         finalMapName = map_name_get + ".mxl"
         finalmap = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\Generatedmap\\" + finalMapName
-
-
-        name_list = finalMapName.split("_")
-        template_file_name = name_list[-3] + "_" + name_list[-2] + "_" + name_list[-1]
-        template_file = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\" + \
-                        template_file_name
+        template_file_names = ["I" + "_" + transaction + "_" + str(variable)+".mxl","O" + "_" + transaction + "_" + str(variable)+".mxl"]
+        template_file = ""
+        for files in template_file_names:
+            print(files)
+            some_path = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\" + files
+            if os.path.exists(some_path):
+                print(some_path)
+                template_file = some_path
+                break
+        else:
+            error = "Error Occured !! Either the Template file is not available or You have given the Template map name wrong"
+            return render_template('index.html', title='Home', user=session['username'], transactions=session['Transactions'],error=error)
         change(template_file,basefile,Targetversion,finalmap,map_name_get)
         return send_file(finalmap, as_attachment=True)
 
 
-@app.route('/report_file/')
+@app.route('/report_file')
 def group_file_tut():
-    # print(1)
-    mymap = session['report_file']
-    try:
-        return send_file(mymap, attachment_filename='demo.docx')
-    except Exception as e:
-        return str(e)
+    files = os.listdir("C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates")
+    return render_template('templatelist.html',files = files,title='Home', user=session['username'])
 
+@app.route('/templateUploader',methods=['POST'])
+def templateUploader():
+    if request.method == 'POST':
+        f = request.files['file']
+        print("called")
+        f.save("C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\" + secure_filename(f.filename))
+        return redirect(url_for('group_file_tut'))
+
+@app.route('/downloadTemplate/<string:id>', methods=['GET', 'POST'])
+def download_temp(id):
+    files = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\"+id
+    return send_file(files,as_attachment=True)
+
+@app.route('/deleteTemplate/<string:id>', methods=['GET', 'POST'])
+def delete_temp(id):
+    files = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\"+id
+    os.remove(files)
+    return redirect(url_for('group_file_tut'))
 
 @app.route('/logout', methods=['GET'])
 def logout():
