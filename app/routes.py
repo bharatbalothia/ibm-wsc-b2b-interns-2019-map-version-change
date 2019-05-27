@@ -10,6 +10,7 @@ import couchdb
 
 couchserver = couchdb.Server("http://%s:%s@9.199.145.193:5984/" % ("admin", "admin123"))
 segment_db = couchserver["segmentusagedefs"]
+baseFolder = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\"
 
 
 def profile(fnc):
@@ -95,7 +96,7 @@ def upload_basemap_file():
     if request.method == 'POST':
         f = request.files['file']
         transaction = request.form.get('select_transaction')
-        f.save("C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\basemap\\" + secure_filename(f.filename))
+        f.save(baseFolder+ "MapVersionChanger\\basemap\\" + secure_filename(f.filename))
         Targetversion = request.form.get('select_version')
         print(f.filename)
         map_name_get = request.form.get('Map')
@@ -108,16 +109,16 @@ def upload_basemap_file():
             variable = int(Targetversion)
         except ValueError:
             variable = Targetversion
-        basefile = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\basemap\\" + f.filename
+        basefile = baseFolder+ "MapVersionChanger\\basemap\\" + f.filename
 
 
         finalMapName = map_name_get + ".mxl"
-        finalmap = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\Generatedmap\\" + finalMapName
+        finalmap = baseFolder+ "MapVersionChanger\\Generatedmap\\" + finalMapName
         template_file_names = ["I" + "_" + transaction + "_" + str(variable)+".mxl","O" + "_" + transaction + "_" + str(variable)+".mxl"]
         template_file = ""
         for files in template_file_names:
             print(files)
-            some_path = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\" + files
+            some_path = baseFolder+ "MapVersionChanger\\std_version_templates\\" + files
             if os.path.exists(some_path):
                 print(some_path)
                 template_file = some_path
@@ -131,7 +132,7 @@ def upload_basemap_file():
 
 @app.route('/report_file')
 def group_file_tut():
-    files = os.listdir("C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates")
+    files = os.listdir(baseFolder+ "MapVersionChanger\\std_version_templates")
     return render_template('templatelist.html',files = files,title='Home', user=session['username'])
 
 @app.route('/templateUploader',methods=['POST'])
@@ -139,17 +140,17 @@ def templateUploader():
     if request.method == 'POST':
         f = request.files['file']
         print("called")
-        f.save("C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\" + secure_filename(f.filename))
+        f.save(baseFolder+ "MapVersionChanger\\std_version_templates\\" + secure_filename(f.filename))
         return redirect(url_for('group_file_tut'))
 
 @app.route('/downloadTemplate/<string:id>', methods=['GET', 'POST'])
 def download_temp(id):
-    files = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\"+id
+    files = baseFolder+ "MapVersionChanger\\std_version_templates\\"+id
     return send_file(files,as_attachment=True)
 
 @app.route('/deleteTemplate/<string:id>', methods=['GET', 'POST'])
 def delete_temp(id):
-    files = "C:\\Users\\RajnishKumarVENDORRo\\PycharmProjects\\MapVersionChanger\\std_version_templates\\"+id
+    files = baseFolder+ "MapVersionChanger\\std_version_templates\\"+id
     os.remove(files)
     return redirect(url_for('group_file_tut'))
 
