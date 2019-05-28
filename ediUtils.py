@@ -99,10 +99,10 @@ class ediUtils:
                     prevType = "Group"
                 return componentlist[index - 1], prevType
             elif data[0] == ""  and segmentitem[0] == t and data[1] == segmentitem[1]:
-                print(data)
+                #print(data)
                 index = componentlist.index(data)
-                print(data,index)
-                print(componentlist)
+                #print(data,index)
+                #print(componentlist)
                 prevType = "Segment"
                 if componentlist[index - 1][0] != segmentitem[0] and componentlist[index - 1][3] == 'E':
                     prevType = "Group"

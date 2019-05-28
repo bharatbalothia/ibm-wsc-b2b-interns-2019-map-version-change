@@ -37,7 +37,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
         base_version = soup2.MapDetails.EDIAssociations_IN.VersionID.text
         soup2.MapDetails.EDIAssociations_IN.VersionID.contents[0].replaceWith(target_version)
 
-    name_map = {}
+    name_map = defaultdict(list)
     base_component_list = [row.value for row in segment_db.view('_design/full_list/_view/full_list', key=[base_version, transaction])]
     target_componet_list = [row.value for row in segment_db.view('_design/full_list/_view/full_list', key=[target_version, transaction])]
     
@@ -61,7 +61,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     for x in main_groups_org:
         if x in main_groups_final:
             common_main_groups.append(x)
-            name_map[(x, main_groups_org[x][0])] = [x, main_groups_final[x][0]]
+            name_map[(x, main_groups_org[x][0])].append([x,main_groups_final[x][0]])
             main_grp_name.append([main_groups_org[x][0],main_groups_final[x][0],x])
     sess['group_looping_change'] = [[main_groups_org[i][0], i, main_groups_org[i][1], main_groups_final[i][1]] for i in common_main_groups if main_groups_org[i][1] != main_groups_final[i][1]]
     
@@ -173,6 +173,16 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
                     if len(internal_groups_org[k]) == 0:
                         del internal_groups_org[k]
 
+    for grp in sess['grp_to_be_added']:
+        grp_result = Utils.getAllinternalgroups(target_componet_list, grp)
+        if grp_result is not None:
+            for k in list(internal_groups_final):
+                for x in internal_groups_final[k]:
+                    if x in [p.split("_")[0] for p in grp_result]:
+                        internal_groups_final[k].remove(x)
+                    if len(internal_groups_final[k]) == 0:
+                        del internal_groups_final[k]
+
     print(internal_groups_org)
     print(internal_groups_final)
     print(internal_group_list_final)
@@ -187,7 +197,7 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
         if i in internal_groups_final:
             for x, y in itertools.zip_longest(internal_groups_org[i], internal_groups_final[i]):
                 if x is not None and y is not None:
-                    name_map[(i, x)] = [i, y]
+                    name_map[(i, x)].append([i,y])
                 elif y is None:
                     sess['grp_to_be_deleted'].append([x, i])
                 elif x is None:
@@ -345,13 +355,32 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
         else:
             i += 1
             j += 1
-    '''
+    
     for grp in soup2.find_all('Group'):
         if len(grp.Name.text.split("_")) > 1 and (grp.Name.text.split("_")[1], grp.Name.text.split("_")[0]) in name_map:
             print("name changed")
             grp.Name.contents[0].replaceWith(
                 Utils.getCorrectgroupName(name_map[(grp.Name.text.split("_")[1], grp.Name.text.split("_")[0])][1],
                                              name_map[(grp.Name.text.split("_")[1], grp.Name.text.split("_")[0])][0]))
+    '''
+    onemoreitr = {}
+    for grp in soup2.find_all('Group'):
+        groupname = grp.Name.text.split(":")[0].split("_")
+        print(groupname)
+        if len(groupname) > 1 and (groupname[1], groupname[0]) in name_map:
+            grp.Name.contents[0].replaceWith(Utils.getCorrectgroupName(name_map[(groupname[1], groupname[0])][0][1],
+                                                                          name_map[(groupname[1], groupname[0])][0][0]))
+            #onemoreitr[(groupname[1], groupname[0])] =  name_map[(groupname[1], groupname[0])].pop(0)
+            #if not name_map[(groupname[1], groupname[0])]:
+                #del name_map[(groupname[1], groupname[0])]
+        elif len(groupname) <= 1 and (groupname[0], groupname[0]) in name_map:
+            print(grp.Name.text, groupname)
+            grp.Name.contents[0].replaceWith(Utils.getCorrectgroupName(name_map[(groupname[0], groupname[0])][0][1],
+                                                                          name_map[(groupname[0], groupname[0])][0][0]))
+            name_map[(groupname[0], groupname[0])].pop(0)
+            if not name_map[(groupname[0], groupname[0])]:
+                del name_map[(groupname[0], groupname[0])]
+        print(name_map)
 
     # segment Added
     for group,seg in sess['seg_to_be_added']:
@@ -436,3 +465,6 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     print(sess['elem_to_be_deleted'])
     print(sess['elem_length_change'])
     print(sess['elem_type_change'])
+    print(sess)
+    print([key for key in sess])
+    return sess

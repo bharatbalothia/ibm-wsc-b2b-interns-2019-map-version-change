@@ -75,6 +75,7 @@ def get_versions():
     trans = request.form.get('transaction')
     print(trans)
     versions = {data.value for data in segment_db.view('_design/version-seg/_view/version-seg', key=trans)}
+    versions = sorted(versions)
     html_string_selected = ''
     for entry in versions:
         html_string_selected += '<option value="{}">{}</option>'.format(entry, entry)
@@ -126,7 +127,8 @@ def upload_basemap_file():
         else:
             error = "Error Occured !! Either the Template file is not available or You have given the Template map name wrong"
             return render_template('index.html', title='Home', user=session['username'], transactions=session['Transactions'],error=error)
-        change(template_file,basefile,Targetversion,finalmap,map_name_get)
+        sessdict = change(template_file,basefile,Targetversion,finalmap,map_name_get)
+        #return render_template('index.html', title='Home', user=session['username'],transactions=session['Transactions'], sess=sessdict)
         return send_file(finalmap, as_attachment=True)
 
 

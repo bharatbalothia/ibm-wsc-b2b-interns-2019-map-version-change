@@ -73,4 +73,18 @@
     <br>
     <h5 style="color: red;">{{ error }}</h5>
 	</div>
+    <div class="container jumbotron">
+        {% if sess %}
+            <p>{{ sess.grp_to_be_added == none }}</p>
+            <p>{{ sess.grp_to_be_deleted }}</p>
+            <p>{{ sess.group_looping_change }}</p>
+            <p>{{ sess.seg_to_be_added }}</p>
+            <p>{{ sess.seg_to_be_deleted }}</p>
+            <p>{{ sess.seg_looping_change }}</p>
+            <p>{{ sess.elem_to_be_added }}</p>
+            <p>{{ sess.elem_to_be_deleted }}</p>
+            <p>{{ sess.elem_length_change }}</p>
+            <p>{{ sess.elem_type_change }}</p>
+        {% endif %}
+    </div>
 {% endblock %}
