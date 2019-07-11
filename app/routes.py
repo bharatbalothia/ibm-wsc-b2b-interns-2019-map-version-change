@@ -106,16 +106,13 @@ def upload_basemap_file():
             return render_template('index.html', title='Home', user=session['username'],
                                    transactions=session['Transactions'], error=error)
 
-        try:
-            variable = int(Targetversion)
-        except ValueError:
-            variable = Targetversion
+        variable = Targetversion.strip("0")
         basefile = baseFolder+ "MapVersionChanger\\basemap\\" + f.filename
 
 
         finalMapName = map_name_get + ".mxl"
         finalmap = baseFolder+ "MapVersionChanger\\Generatedmap\\" + finalMapName
-        template_file_names = ["I" + "_" + transaction + "_" + str(variable)+".mxl","O" + "_" + transaction + "_" + str(variable)+".mxl"]
+        template_file_names = ["I" + "_" + transaction + "_" + variable+".mxl","O" + "_" + transaction + "_" + variable+".mxl"]
         template_file = ""
         for files in template_file_names:
             print(files)

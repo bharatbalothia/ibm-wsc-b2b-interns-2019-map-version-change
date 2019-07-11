@@ -392,16 +392,20 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
                 for segments in grp.find_all("Segment"):
                     if segments.Name and segments.Name.text.split(":")[0] == seg:
                         to_be_added = segments
+                        print("found")
                         break
                         # print(to_be_added)
         if previousitem[1] == "Segment":
             for grp in soup2.find_all("Group"):
+                #print(grp.Name)
                 if grp.Name and grp.Name.text.split("_")[0] == previousitem[0][0]:
+                    print("found group")
                     for seg in grp.find_all("Segment"):
+                        #print(seg.Name.text.split(":")[0])
                         if seg.Name and seg.Name.text.split(":")[0] == previousitem[0][1]:
                             seg.insert_after(to_be_added)
+                            print("inserted")
                             break
-                    break
         elif previousitem[1] == "Group":
             for grp in soup2.find_all("Group"):
                 if grp.Name and grp.Name.text.split("_")[0] == previousitem[0][0]:
@@ -455,9 +459,9 @@ def change(targettemplate,basefile,targetversion,finalMap,new_map_name):
     print(sess['grp_to_be_deleted'])
     print(sess['group_looping_change'])
     
-    print(sorted(sess['seg_to_be_added'],key=itemgetter(0)))
-    print(sorted(sess['seg_to_be_deleted'],key=itemgetter(0)))
-    print(sorted(sess['seg_looping_change'],key=itemgetter(0)))
+    print(sess['seg_to_be_added'])
+    print(sess['seg_to_be_deleted'])
+    print(sess['seg_looping_change'])
     
     print(sess['elem_to_be_added'])
     
